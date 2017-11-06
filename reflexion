@@ -2,6 +2,7 @@ implementation des reseau bayesiens
 
 Mode FPGA on implemente un réseau de base qui a un max par neud de connections entrante et un taille de memoire max
 
+
 Mode ASIC:
 
 On crée un script qui genere un VHDL a partir d'une DB en gérant un taille de mémoire optimiser : pas minimum(DB) -> taille mots dans la mémoire
@@ -11,3 +12,15 @@ Neud: utilisation de variable qui permet de faire un generic -> sur le bus entr�
 --> Discussion memoire partager ou registre en mode ASIC
 --> Voir les DB mode FPGA pour
  
+
+Mail a faire:
+
+demander une db 
+point sur la reflexion de l'implementation
+
+FPGA/ASIC avec generateur
+
+planning
+
+
+
