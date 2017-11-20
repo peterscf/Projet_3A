@@ -44,7 +44,7 @@ layer2 =  [ theta_1(1,1)*(1-X(1))*(1-X(2))+theta_1(1,2)*(X(1))*(1-X(2))...
     +theta_1(2,3)*(1-X(1))*(X(2))+theta_1(2,4)*(X(1))*(X(2)) ]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% faire un code generalisé
+% faire un code generalisÃ©
 % somme sur 2 puissance n noeud parent
 
 
@@ -74,22 +74,16 @@ layer2(:,2)= [ 1-layer2(:,1)]
 
 
 layer2= [  Complement_theta(:)'*theta_1' 0]
-<<<<<<< HEAD
 
 layer2(:,2)= [ 1-layer2(:,1)]
 
-=======
->>>>>>> 76b178f6147d6fe81ba981cdfd844d06caddda5e
 
-layer2(:,2)= [ 1-layer2(:,1)]
 
 parente2 =[ 1, 1; 0 0]
 
 parente3 = [1 0 ; 1 0]
 
-parente2 =[ 1, 1; 0 0]
 
-parente3 = [1 0 ; 1 0 ]
 
 
 %%%% crer un objet par le constructeur %%%%
