@@ -46,31 +46,18 @@ classdef noeud
                     nd.probabilite =[Complement_theta(:)'*nd.theta' 0];
                     nd.probabilite(2)= [ 1-nd.probabilite(1)];
 %                     m=nd.probabilite
-                elseif length(nd.parents) == 3
+                elseif length(obj.parents) == 3
                     Complement_theta=nd.parents(1).probabilite'*nd.parents(2).probabilite;
                     Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(3).probabilite;
-                    
+                    Complement_theta=nd.parents(1).probabilite'*nd.parents(2).probabilite;
                     nd.probabilite =[Complement_theta(:)'*nd.theta' 0];
                     nd.probabilite(2)= [ 1-nd.probabilite(1)];
-                elseif length(nd.parents) == 4
+                elseif length(obj.parents) == 4
                     Complement_theta=nd.parents(1).probabilite'*nd.parents(2).probabilite;
-                    Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(3).probabilite;
-                    Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(4).probabilite;
-                    
                     nd.probabilite =[Complement_theta(:)'*nd.theta' 0];
                     nd.probabilite(2)= [ 1-nd.probabilite(1)];
-                elseif length(nd.parents) == 5
+                elseif length(obj.parents) == 5
                     Complement_theta=nd.parents(1).probabilite'*nd.parents(2).probabilite;
-                    Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(3).probabilite;
-                    Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(4).probabilite;
-                    Complement_theta=Complement_theta(:);
-                    Complement_theta=Complement_theta*nd.parents(5).probabilite;
-
                     nd.probabilite =[Complement_theta(:)'*nd.theta' 0];
                     nd.probabilite(2)= [ 1-nd.probabilite(1)];
                 end
