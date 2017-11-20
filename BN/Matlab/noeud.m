@@ -9,7 +9,7 @@ classdef noeud
     end
     
 %     properties (Dependent)
-%         proba_calculee
+%         probabilite
 %     end
     
     
@@ -39,13 +39,16 @@ classdef noeud
    function m = get.probabilite(obj)
        if length(obj.parents) == 0
            m=obj.probabilite;
-%       elseif length(obj.parents) == 1
-%           Complement_theta=obj.parents(1).probabilite'
-%           
-%           probabilite =[Complement_theta(:)'*obj.theta' 0]
-%           probabilite(2)= [ 1-probabilite(1)]
-%           
-%       else
+       elseif length(obj.parents) == 1
+          
+          %obj.probabilite = [obj.parents(1).probabilite*obj.theta' 0];
+          %obj.probabilite(2)= [ 1-obj.probabilite(1)];
+          %m=obj.probabilite;
+          m=size(obj.parents(1).probabilite)
+          J='A'
+          %m=obj.theta'
+          
+
        elseif length(obj.parents) == 2
           Complement_theta=obj.parents(1).probabilite'*obj.parents(2).probabilite;
           

@@ -65,14 +65,20 @@ P2 =[0.3 0.7]
 theta_1=[ 0.03 0.05 0.001 0.02]
 Complement_theta=P1'*P2
 
-layer2= [  Complement_theta(:)'*theta_1' 0]
+P3= [  Complement_theta(:)'*theta_1' 0]
 
-layer2(:,2)= [ 1-layer2(:,1)]
+P3(:,2)= [ 1-P3(:,1)]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-[nnoeud,state]=size(Layer_1)
+P4_theta =[0.9 0.2]
+P4 =[P3*P4_theta' 0]
 
-
+          Complement_theta=obj.parents(1).probabilite;
+          
+          obj.probabilite =[Complement_theta(:)*obj.theta' 0];
+          obj.probabilite(2)= [ 1-obj.probabilite(1)];
+          m=obj.probabilite;
+          
 layer2= [  Complement_theta(:)'*theta_1' 0]
 
 layer2(:,2)= [ 1-layer2(:,1)]
@@ -94,6 +100,9 @@ td = TensileData('carbon steel',1,[2e4 4e4 6e4 8e4], [.12 .20 .31 .40]);
 %probabilite
 %theta
     
-P1 = noeud ('P1',[],[0.9 0.1], [])
-P2 = noeud ('P2',[],[0.3 0.7], [])
-P3 = noeud ('P3',[P1 , P2],[], [0.03 0.05 0.001 0.02])
+N1 = noeud ('P1',[],[0.9 0.1], []) % 0   1 
+N2 = noeud ('P2',[],[0.3 0.7], []) % 0   1
+N3 = noeud ('P3',[N1 , N2],[], [0.03 0.05 0.001 0.02]) %  00 10 01 11
+N4 = noeud ('P4',[N3],[], [0.9 0.2]) % 0  1
+N5 = noeud ('P5',[N3],[], [0.65 0.3]) % 0  1
+
