@@ -128,9 +128,9 @@ for i = 1:m
         elseif strcmp(A{i+9,1},'}') % 3 parent
             eval([ A{i,4} ' = noeud (A{i,4},[ eval([ A{i,6} ])  eval([ A{i,8} ])  eval([ A{i,10} ]) ],[], [str2double({A{i+(1:8),11}}) ]) '])
         elseif strcmp(A{i+17,1},'}') % 4 parent
-            eval([ A{i,4} ' = noeud (A{i,4},[ eval([ A{i,6} ])  eval([ A{i,8} ])  eval([ A{i,10}  eval([ A{i,12} ]) ],[], [str2double({A{i+(1:16),11}}) ]) '])
+            eval([ A{i,4} ' = noeud (A{i,4},[ eval([ A{i,6} ])  eval([ A{i,8} ])  eval([ A{i,10} ])  eval([ A{i,12} ]) ],[], [str2double({A{i+(1:16),13}}) ]) '])
         elseif strcmp(A{i+33,1},'}') % 5 parent
-            eval([ A{i,4} ' = noeud (A{i,4},[ eval([ A{i,6} ])  eval([ A{i,8} ])  eval([ A{i,10}  eval([ A{i,12}  eval([ A{i,14} ]) ],[], [str2double({A{i+(1:32),11}}) ]) '])
+            eval([ A{i,4} ' = noeud (A{i,4},[ eval([ A{i,6} ])  eval([ A{i,8} ])  eval([ A{i,10} ])  eval([ A{i,12} ])  eval([ A{i,14} ]) ],[], [str2double({A{i+(1:32),15}}) ]) '])
         else
             fprintf('\n Un noeud a plus de 5 parents, limite du model atteinte \n');
         end
