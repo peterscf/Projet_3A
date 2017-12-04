@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#
+# Setting up MATLAB 2016a environment 64 bits
+#
+
+export MATLAB=/softslin/matlab2016a_64b
+export LM_LICENSE_FILE=27000@cimeldap
+
+export PATH="${PATH}:${MATLAB}/bin"
+
+if [ -n "${LD_LIBRARY_PATH}" ] ; then
+        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${MATLAB}/bin/glnxa64"
+else
+        export LD_LIBRARY_PATH="${MATLAB}/bin/glnxa64"
+fi
+
