@@ -1,0 +1,13 @@
+EVcdFile ""
+EVcdInfoFile ""
+VcdFile ""
+VcdInfoFile ""
+VectorFile nil
+allDefinitionFiles ((t "/softslin/AMS_410_CDS/spectre/s35/soac/processOption.scs"))
+allIncludedPaths nil
+allStimulusFiles nil
+allVectorFiles nil
+definitionFiles ("/softslin/AMS_410_CDS/spectre/s35/soac/processOption.scs")
+hlcheck "off"
+includePath ""
+stimulusFile nil
