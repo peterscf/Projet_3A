@@ -1,0 +1,16 @@
+(envOpts analysisOrder) ("tran" "ac" "sp")
+(envOpts autoDisplay) t
+(envOpts cmd64bit) nil
+(envOpts enableArclength) nil
+(envOpts firstRun) t
+(envOpts paramRangeCheckFile) "/softl1/AMS_410_CDS/spectre/ams_range.lmts"
+(envOpts pllPlugin) ""
+(envOpts pllWizardinfo) ""
+(envOpts printComments) nil
+(envOpts restart) ""
+(envOpts savestate) ""
+(envOpts sst2usecolon) nil
+(envOpts stopViewList) ("spectre" "ahdl" "veriloga")
+(envOpts switchViewList) ("spectre" "cmos_sch" "schematic")
+(envOpts userCmdLineOption) ""
+(envOpts vcoType) ""
