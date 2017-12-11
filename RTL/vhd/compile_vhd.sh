@@ -1,16 +1,38 @@
-#source "./config/config_RTL"
+#!/bin/bash
+#cd ${PROJECT_DIR}/config/config_RTL
+#source 
 
-set libV = lib_VHD
-set libB = lib_BENCH
+if [ -z $PROJECT_DIR ]
+then
+	echo "Veulliez sourcez le source.sh a la racine du dossier RTL"
+else
 
-set VHD = "./vhd/cell.vhd\
-		./vhd/cordic.vhd\
-		./vhd/pre_process.vhd"
+	echo "CLEAN"
+	echo "///////////////////////////////////////////////"
+	rm -rf compile.log compile_top.log
+	vdel -lib ${LIB_DIR}/lib_VHD -all
+	vdel -lib ${LIB_DIR}/lib_BENCH -all
+	echo "CLEAN OK"
 
-		
-set BENCH = "./bench/*.vhd"
+	echo "CREATE LIB"
+	echo "///////////////////////////////////////////////"
+	vlib ${LIB_DIR}/lib_VHD
+	vlib ${LIB_DIR}/lib_BENCH
+	echo "CREATE LIB OK"
 
-vcom -work $libV $VHD
-vcom -work $libB $BENCH
+	echo "MAP LIB"
+	echo "///////////////////////////////////////////////"
 
+	vmap lib_BENCH ${LIB_DIR}/lib_BENCH
+	vmap lib_VHD ${LIB_DIR}/lib_VHD
+	echo "COMPILE TOP"
+	echo "///////////////////////////////////////////////"
+	vcom -work lib_VHD ${VHD_DIR}/*.vhd  >> compile_top.log
+	#grep Errors compile_top.log
+	echo "COMPILE BENCH"
+	echo "///////////////////////////////////////////////"
 
+	vcom -work lib_BENCH ${BENCH_DIR}/*.vhd >> compile.log
+	grep Errors compile.log
+	grep Error compile.log
+fi
