@@ -1,0 +1,4 @@
+Running: xsim.dir/bench_tst_cna_behav/xsimk -simmode gui -wdb bench_tst_cna_behav.wdb -simrunnum 0 -socket 33093
+Design successfully loaded
+Design Loading Memory Usage: 40776 KB (Peak: 40776 KB)
+Design Loading CPU Usage: 10 ms

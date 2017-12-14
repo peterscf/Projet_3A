@@ -1,0 +1,124 @@
+library ieee;  
+use ieee.std_logic_1164.all; -- ici mettre la library
+
+entity ring_loop is port( -- le device décrit danc ce fichier
+	clk, clk_delay in std_logic;
+	o out std_logic;
+end ring_loop;
+
+use work.gatespkg.all; -- ici mettre la library des cellules standards appelée
+
+architecture struct_ring_loop of ring_loop is
+
+component MUX_analogique -- ici mettre le nom d'une cellule porte de transfert
+	port (a,b,com : in std_logic; o : out std_logic);
+end component;
+
+component inverseur -- ici mettre le nom d'une cellule inverseur
+	port (a : in std_logic; o : out std_logic);
+end component;
+
+component registre -- ici mettre le nom d'une cellule registre
+	port (D,clk : in std_logic; Q,Q_bare : out std_logic);
+end component;
+
+
+signal mux1,mux2,mux3,mux4,mux5,inv1,inv2,inv3,inv4,inv4,inv5 : std_logic;
+
+begin
+	m1: MUX_analogique port map (inv1,inv5,clk,mux1);
+	m2: MUX_analogique port map (inv2,inv1,clk,mux2);
+	m3: MUX_analogique port map (inv3,inv2,clk,mux3);
+	m4: MUX_analogique port map (inv4,inv3,clk,mux4);
+	m5: MUX_analogique port map (inv5,inv4,clk,mux5);
+	i1: inverseur port map (mux1,inv1);
+	i2: inverseur port map (mux2,inv2);
+	i3: inverseur port map (mux3,inv3);
+	i4: inverseur port map (mux4,inv4);
+	i5: inverseur port map (mux5,inv5);
+
+	r1: registre port map (inv5,clk_delay,o,)
+
+end struct_ring_loop;
+
+
+
+
+------------------------------------------------------------------------------------------
+------------------------------------ Code Exemple ----------------------------------------
+------------------------------------------------------------------------------------------
+library ieee;  
+use ieee.std_logic_1164.all;
+
+
+entity eqcomp4 is port(
+	a,b 	in std_logic_vector (3 downto 0);
+	equals	out std_logic);
+end eqcomp4;
+
+use work.gatespkg.all;
+
+architecture struct of epcomp4 is
+signal x : std_logic_vector(0 to 3 )
+begin
+	u0: xnor2 port map (a(0),b(0),x(0));
+	
+	u4: and4 portmap (x(0),x(1),x(2),x(4),equals);
+end struct;
+
+
+
+entity MAJORITY is port(
+	A_IN, B_IN, C_IN: in BIT;
+	Z_OUT: out BIT);
+end MAJORITY;
+
+
+architecture struct of MAJORITY is
+--Declare logic operators
+component AND2_OP 
+port (A, B : in BIT; z : out BIT);
+end component;
+
+component OR3_OP 
+port (A, B, C : in BIT; z : out BIT);
+end component;
+
+--Declare signals to interconnect logic operators
+signal INT1, INT2, INT3 : BIT;
+
+begin
+	A1:  AND2_OP port map (A_IN,B_IN,INT1);
+	A2:  AND2_OP port map (A_IN,C_IN,INT2);
+	A3:  AND2_OP port map (B_IN,C_IN,INT3);
+	A4:  OR3_OP port map (INT1,INT2,INT3,Z_OUT);
+end struct;
+
+
+
+
+entity MAJORITY_2x3 is port(
+A1,B1, C1    : in BIT;
+A2, B2, C2   : in Bit;
+Z_OUT        : out BIT);
+endMAJORITY_2x3;
+
+architecture struct of MAJORITY_2x3 is
+
+component AND2_OP
+port (A, B : in BIT; z : out BIT);
+end component;
+
+component MAJORITY
+port (A_IN,B_IN,C_IN : in BIT Z_OUT : out BIT);
+end component;
+
+signal INT1, INT2: BIT;
+
+begin
+M1:  MAJORITY port map (A1,B1,C1,INT1);
+M2:  MAJORITY port map (A2,B2,C2,INT2);
+A1:  AND2_OP port map (INT1,INT2,Z_OUT);
+end struct;
+
+
