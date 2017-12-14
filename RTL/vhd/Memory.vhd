@@ -12,12 +12,12 @@ entity Memory is
     port(   clk: in std_logic;
             reset_n : in std_logic;
       --Port entree
-      			addr : in std_logic_vector(4 dwnto 0);
+      			addr : in std_logic_vector(4 downto 0);
       			data_in : in std_logic_vector(9 downto 0);
       			Wen : in std_logic;
       			full_in : in std_logic;
       --Port de sortie
-      			data_out : in std_logic_vector(9 downto 0);
+      			data_out : out std_logic_vector(9 downto 0);
       			full_out : out std_logic		   					
 				);
 end Memory;
@@ -74,10 +74,10 @@ begin
 						  	else
 						  		next_state <= Bypass;
 						  	end if;
-						  	Prob(to_integer(index)) <= data_in;
+						  	
 							when Prog => 
 								--remplissage de la MEM
-								
+									Prob(to_integer(index)) <= data_in;
 									if index = "11111"  then
 										full_out <= '1';
 										next_state <= Idle; 
@@ -88,7 +88,7 @@ begin
 									
 							when Idle => 
 								--Fonctionement Mem std
-							  data_out <= Prob(to_integer(unsigned(addr))));
+							  data_out <= Prob(to_integer(unsigned(addr)));
 								if Wen ='1'  then
 									index_temp <= "00000";
 									next_state <= Prog;

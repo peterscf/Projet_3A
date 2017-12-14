@@ -9,19 +9,21 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity CORE is
-	generic(N_parents : integer); 
+	generic(N_parents : integer := 10); 
 
     port(	clk: in std_logic;
 			reset_n : in std_logic;
       --Port entree
-				rdm_gene_in : std_logic_vector (9 downto 0);
-				prog_link : std_logic_vector(N_parents downto 0);
+				rdm_gene_in : in std_logic_vector (9 downto 0);
+				prog_link_in : in std_logic_vector(N_parents downto 0);
+				prog : in std_logic;
 			--entrée pour la MEM      			
 				addr : in std_logic_vector(N_parents downto 0);
       			data_in : in std_logic_vector(9 downto 0);
       			Wen : in std_logic;
       			full_in : in std_logic;
       --Port de sortie
+				prog_link_out : out std_logic_vector(N_parents downto 0);
       			full_out : out std_logic;
 				prob_out : out std_logic
 		);
@@ -32,9 +34,9 @@ architecture A of CORE is
 	--memoire
 	component Memory is 
 		port(   clk: in std_logic;
-            reset_n : in std_logic;
+				reset_n : in std_logic;
       --Port entree
-      			addr : in std_logic_vector(4 dwnto 0);
+      			addr : in std_logic_vector(4 downto 0);
       			data_in : in std_logic_vector(9 downto 0);
       			Wen : in std_logic;
       			full_in : in std_logic;
@@ -46,25 +48,62 @@ architecture A of CORE is
 	--Gateway
 	component GATEWAY is 
 		generic(N_parents : integer); 
-	    port(		reset_n : in std_logic;
+	    port(		clk: in std_logic;
+					reset_n : in std_logic;
 			--Port entree
-					prog_link : std_logic_vector(N_parents downto 0);
-					addr_in : in std_logic_vector(N_parents downto 0);	
+					prog_in: in std_logic;
+					prog_link_in : in std_logic_vector(N_parents downto 0);
+					addr_in : in std_logic_vector(N_parents downto 0);
+					full_in : in std_logic;
 			--Port de sortie				
-					addr_out : in std_logic_vector(4 downto 0));
+					addr_out : in std_logic_vector(4 downto 0);
+					full_out : out std_logic;
+					prog_link_out : out std_logic_vector(N_parents downto 0));
+
 	end component;
 	
 
 	--déclaration des signaux
-signal sig_addr_MEM : std_logic_vector(4 downt 0);
-
+signal sig_addr_MEM : std_logic_vector(4 downto 0);
+signal sig_prob : std_logic_vector(9 downto 0);
+signal sig_full_in_G : std_logic;
+signal sig_full_in_M: std_logic;
+signal sig_full_out_G : std_logic;
+signal sig_full_out_M : std_logic;
 
 begin
 
 
-	G0 : GATEWAY port map (	reset_n, prog_link,	addr, sig_addr_MEM);
+	G0 : GATEWAY generic map (N_parents => N_parents)
+	port map (clk, reset_n, prog, prog_link_in,addr, sig_full_in_G, sig_addr_MEM, sig_full_out_G, prog_link_out);
 	
-	MEM0: Memory port map (	clk,reset_n, sig_addr_MEM, data_in, Wen, full_in, sig_prob, full_out);
+	MEM0: Memory port map (	clk,reset_n, sig_addr_MEM, data_in, Wen, sig_full_in_M, sig_prob, sig_full_out_M);
 
-	
+	compare :process(sig_prob,rdm_gene_in)
+	begin
+		if rdm_gene_in < sig_prob then 
+			prob_out <=	'1';
+		else 
+			prob_out <= '0';
+		end if;
+	end process;
+
+	MUX:process(prog)
+	begin
+		if prog = '1' then 
+			full_out <= sig_full_out_G;
+		else 
+			full_out <= sig_full_out_M;
+		end if;
+	end process;
+
+	DEMUX: process(Wen)
+	begin
+		if Wen ='1' then
+			sig_full_in_M <= full_in;
+		else
+			sig_full_in_G <= full_in;
+		end if;
+	end process;
+
 end A;

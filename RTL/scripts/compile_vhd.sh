@@ -9,30 +9,24 @@ else
 
 	echo "CLEAN"
 	echo "///////////////////////////////////////////////"
-	rm -rf compile.log compile_top.log
+	rm -rf ${LOG_DIR}/compile.log
 	vdel -lib ${LIB_DIR}/lib_VHD -all
 	vdel -lib ${LIB_DIR}/lib_BENCH -all
 	echo "CLEAN OK"
 
 	echo "CREATE LIB"
 	echo "///////////////////////////////////////////////"
-	vlib ${LIB_DIR}/lib_VHD
-	vlib ${LIB_DIR}/lib_BENCH
+	vlib ${LIB_DIR}/lib_VHD >> ${LOG_DIR}/compile.log
+	vlib ${LIB_DIR}/lib_BENCH >> ${LOG_DIR}/compile.log
 	echo "CREATE LIB OK"
 
 	echo "MAP LIB"
 	echo "///////////////////////////////////////////////"
 
-	vmap lib_BENCH ${LIB_DIR}/lib_BENCH
-	vmap lib_VHD ${LIB_DIR}/lib_VHD
-	echo "COMPILE TOP"
+	vmap lib_BENCH ${LIB_DIR}/lib_BENCH >> ${LOG_DIR}/compile.log
+	vmap lib_VHD ${LIB_DIR}/lib_VHD >> ${LOG_DIR}/compile.log
+	echo "COMPILE VHD"
 	echo "///////////////////////////////////////////////"
-	vcom -work lib_VHD ${VHD_DIR}/*.vhd  >> compile_top.log
-	#grep Errors compile_top.log
-	echo "COMPILE BENCH"
-	echo "///////////////////////////////////////////////"
-
-	vcom -work lib_BENCH ${BENCH_DIR}/*.vhd >> compile.log
-	grep Errors compile.log
-	grep Error compile.log
+	vcom -work lib_VHD ${VHD_DIR}/*.vhd  >> ${LOG_DIR}/compile.log
+	grep Error ${LOG_DIR}/compile.log
 fi
