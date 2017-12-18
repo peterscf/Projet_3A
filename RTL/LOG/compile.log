@@ -5,21 +5,15 @@ Model Technology ModelSim - Intel FPGA Edition vmap 10.5c Lib Mapping Utility 20
 vmap lib_VHD /home/floriant/Projet_3A/RTL/libs/lib_VHD 
 Modifying /home/floriant/Projet_3A/RTL/modelsim.ini
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-Start time: 08:29:10 on Dec 18,2017
-vcom -work lib_VHD /home/floriant/Projet_3A/RTL/vhd/core.vhd /home/floriant/Projet_3A/RTL/vhd/gateway.vhd /home/floriant/Projet_3A/RTL/vhd/Memory.vhd /home/floriant/Projet_3A/RTL/vhd/network.vhd 
+Start time: 13:28:30 on Dec 18,2017
+vcom -work lib_VHD /home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd /home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity CORE
--- Compiling architecture A of CORE
--- Compiling entity GATEWAY
--- Compiling architecture A of GATEWAY
--- Compiling entity Memory
--- Compiling architecture A of Memory
-** Warning: /home/floriant/Projet_3A/RTL/vhd/Memory.vhd(80): (vcom-1272) Length of expected is 11; length of actual is 10.
-** Warning: /home/floriant/Projet_3A/RTL/vhd/Memory.vhd(91): (vcom-1272) Length of expected is 10; length of actual is 11.
--- Compiling entity Network
--- Compiling architecture A of Network
-End time: 08:29:11 on Dec 18,2017, Elapsed time: 0:00:01
-Errors: 0, Warnings: 2
+-- Compiling entity VIP_moy
+-- Compiling architecture A of VIP_moy
+-- Compiling entity VIP_prog
+-- Compiling architecture A of VIP_prog
+End time: 13:28:31 on Dec 18,2017, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

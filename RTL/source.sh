@@ -29,5 +29,6 @@ else
 	export BENCH_DIR="${PROJECT_DIR}/bench"
 	export LIB_DIR="${PROJECT_DIR}/libs"
 	export LOG_DIR="${PROJECT_DIR}/LOG"
+	export SCRIPT_DIR="${PROJECT_DIR}/scripts"
 	export MODELSIM="${PROJECT_DIR}/modelsim.ini"
 fi
