@@ -1,0 +1,12 @@
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_lib.sv
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_sync_block.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_sync_pulse.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_cpll_railing.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_datawidth_conv.sv
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_dru.sv
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_axi4lite.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_drp_control.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_drp_control_8series.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_drp_control_hdmi.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_interrupts.v
+/softl2/XILINX/vivado_17.1/Vivado/2017.1/data/ip/xilinx/vid_phy_controller_v2_0/hdl/src/verilog/vid_phy_controller_v2_0_gtp_common.v

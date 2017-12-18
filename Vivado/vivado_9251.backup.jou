@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Dec 14 08:29:21 2017
+# Process ID: 9251
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1 -part xc7vx485tffg1157-1
+set_property target_language VHDL [current_project]
+add_files {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/bench_tst_cna.vhd /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/bench_tst_cna.vhd}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/bench_tst_cna.vhd
+add_files -norecurse /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/test_cna.vhd
+update_compile_order -fileset sources_1
+remove_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/bench_tst_cna.vhd
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/test_cna.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+compile_simlib -language all -dir {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/project_1.cache/compile_simlib} -simulator modelsim -simulator_exec_path {/softl3/modelsim10_5c/modeltech/bin} -library all -family  all
+launch_simulation

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/test_cna.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity test_cna
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/bench_tst_cna.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bench_tst_cna
