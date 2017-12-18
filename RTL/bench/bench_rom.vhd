@@ -6,7 +6,7 @@ library lib_VHD ;
 use lib_VHD.ROM_cordic;
 
 
-entity test_rom is end test_rom;
+entity Test is end test_rom;
 
 architecture test1 of test_rom is
 --Test fonctionel !!!

@@ -5,7 +5,7 @@ Model Technology ModelSim - Intel FPGA Edition vmap 10.5c Lib Mapping Utility 20
 vmap lib_VHD /home/floriant/Projet_3A/RTL/libs/lib_VHD 
 Modifying /home/floriant/Projet_3A/RTL/modelsim.ini
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-Start time: 11:09:39 on Dec 14,2017
+Start time: 08:29:10 on Dec 18,2017
 vcom -work lib_VHD /home/floriant/Projet_3A/RTL/vhd/core.vhd /home/floriant/Projet_3A/RTL/vhd/gateway.vhd /home/floriant/Projet_3A/RTL/vhd/Memory.vhd /home/floriant/Projet_3A/RTL/vhd/network.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -21,5 +21,5 @@ vcom -work lib_VHD /home/floriant/Projet_3A/RTL/vhd/core.vhd /home/floriant/Proj
 ** Warning: /home/floriant/Projet_3A/RTL/vhd/Memory.vhd(91): (vcom-1272) Length of expected is 10; length of actual is 11.
 -- Compiling entity Network
 -- Compiling architecture A of Network
-End time: 11:09:39 on Dec 14,2017, Elapsed time: 0:00:00
+End time: 08:29:11 on Dec 18,2017, Elapsed time: 0:00:01
 Errors: 0, Warnings: 2
