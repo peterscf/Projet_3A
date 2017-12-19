@@ -2,11 +2,10 @@ library IEEE ;
 use IEEE.std_logic_1164.ALL ;
 --use ieee.std_logic_signed.all;
 use std.textio.all;
-library lib_VHD ;
-use lib_VHD.ROM_cordic;
 
 
-entity Test is end test_rom;
+
+entity Test is end test_ro;
 
 architecture test1 of test_rom is
 --Test fonctionel !!!
@@ -66,6 +65,8 @@ begin
 
 		sig_clk <= not(sig_clk) after  10 ns; --50Mhz
 		sig_resetn <= '1' after 60 ns; 
+
+
 
 		
 end test1;

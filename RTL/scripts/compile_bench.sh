@@ -26,5 +26,6 @@ else
 	echo "COMPILE BENCH"
 	echo "///////////////////////////////////////////////"
 	vcom -work lib_VHD ${BENCH_DIR}/*.vhd  >> ${LOG_DIR}/compile.log
+	grep vcom ${LOG_DIR}/compile.log
 	grep Error ${LOG_DIR}/compile.log
 fi

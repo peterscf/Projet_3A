@@ -18,8 +18,7 @@ entity VIP_prog is
       			Wen : out std_logic;
       			full_in : in std_logic;
       			prog_link_out : out std_logic_vector(N_parents downto 0);
-      			full_out : out std_logic;
-				prob_out : out std_logic_vector (9 downto 0)
+      			prob_out : out std_logic_vector (9 downto 0)
 		);
 end VIP_prog;
 
@@ -31,13 +30,12 @@ signal next_state : STATE;
 signal index : integer;
 signal index_temp : integer ;
 
-type MEM is array (0 to 32) of std_logic_vector(9 downto 0);
+type MEM is array (0 to 32) of std_logic_vector(11 downto 0);
 type MEM_PROG is array (0 to 5) of std_logic_vector(N_parents downto 0);
-
-signal Prog_MEM_prod: MEM;
-
-signal Prog_link : MEM_PROG ;
-
+--Image de la memoire d'un noeud
+constant Prog_MEM_prod: MEM:=(0=>X"000",	1=>X"001",	2=>X"002",	3=>X"003",	4=>X"004",	5=>X"005",	6=>X"006",	7=>X"007",	8=>X"008",	9=>X"009",	10=>X"00A",	11=>X"00B",	12=>X"00C",	13=>X"00D",	14=>X"00E",	15=>X"00F",	16=>X"010",	17=>X"011",	18=>X"012",	19=>X"013",	20=>X"014",	21=>X"015",	22=>X"016",	23=>X"017",	24=>X"018",	25=>X"019",	26=>X"01A",	27=>X"01B",	28=>X"01C",	29=>X"01D",	30=>X"01E",	31=>X"01F", 32 =>X"020");
+--image de la programation des GATEWAY
+constant Prog_link : MEM_PROG :=(0=>X"00",	1=>X"01",	2=>X"02",	3=>X"03",	4=>X"04",	5=>X"05");
 begin
 	
 	P_STATE: process(clk,reset_n) begin
@@ -53,6 +51,13 @@ begin
 	end if;
 	end process P_state ;
 
+--	index_loop : process (index)
+--	begin
+--		if index = 32 then 
+--			index_temp <= 0;
+--		end if;
+--	end process index_loop;
+
 
 	P_Next_State_output : process (enable_prog, full_in)
 
@@ -60,7 +65,9 @@ begin
 	   
 	      		prog	<= '0';
       			Wen		<= '0';
-      			full_out<= '0'; 
+		if index = 32 then 
+			index_temp <= 0;
+		end if;
 
 	case current_state is								
 						  	when Idle => 
@@ -72,13 +79,11 @@ begin
 								
 							when Init_Prog_MEM =>
 								Wen <= '1';
-								full_out <= '1';
 								index_temp <= 0;
 								next_state <= Prog_MEM;
 						  							  	
 							when Prog_MEM => 
 								Wen <='1';
-								full_out <= '1';
 								Prob_out <= Prog_MEM_prod(index);
 								if full_in ='1' then 
 									next_state <= Init_Prog_GW; 
@@ -89,13 +94,11 @@ begin
 
 							when Init_Prog_GW =>
 								Prog <= '1';
-								full_out <= '1';
 								index_temp <= 0;
 								next_state <= Prog_GW;
 							
 							when Prog_GW => 
 								Prog <='1';
-								full_out <= '1';
 								Prog_link_out <= Prog_link(index);
 								if full_in <= '1' then
 									next_state <= Idle; 

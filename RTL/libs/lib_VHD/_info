@@ -177,20 +177,20 @@ Z23 w1513594226
 R2
 R3
 R4
-Z24 d/home/floriant/Projet_3A/RTL/scripts
-Z25 8/home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd
-Z26 F/home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd
+Z24 d/home/floriant/Projet_3A/RTL/bench
+Z25 8/home/floriant/Projet_3A/RTL//bench/VIP_moy.vhd
+Z26 F/home/floriant/Projet_3A/RTL//bench/VIP_moy.vhd
 l0
 L10
 VQ^HMNFPXYF^@ehK?=[b9g0
 !s100 z7N5bTBV5SA0^AJkTgk2Q1
 R7
 32
-Z27 !s110 1513600111
+Z27 !s110 1513693037
 !i10b 1
-Z28 !s108 1513600110.000000
-Z29 !s90 -work|lib_VHD|/home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd|/home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd|
-Z30 !s107 /home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd|/home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd|
+Z28 !s108 1513693037.000000
+Z29 !s90 -work|lib_VHD|/home/floriant/Projet_3A/RTL//bench/VIP_moy.vhd|/home/floriant/Projet_3A/RTL//bench/VIP_Node_TX.vhd|/home/floriant/Projet_3A/RTL//bench/VIP_prog.vhd|
+Z30 !s107 /home/floriant/Projet_3A/RTL//bench/VIP_prog.vhd|/home/floriant/Projet_3A/RTL//bench/VIP_Node_TX.vhd|/home/floriant/Projet_3A/RTL//bench/VIP_moy.vhd|
 !i113 1
 R12
 R13
@@ -213,18 +213,61 @@ R30
 !i113 1
 R12
 R13
-Evip_prog
-Z34 w1513594623
+Evip_node_tx
+Z34 w1513692418
+Z35 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 R2
 R3
 R4
 R24
-Z35 8/home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd
-Z36 F/home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd
+Z36 8/home/floriant/Projet_3A/RTL//bench/VIP_Node_TX.vhd
+Z37 F/home/floriant/Projet_3A/RTL//bench/VIP_Node_TX.vhd
+l0
+L6
+VTFhiTQK36i^nnPlm>BK9g0
+!s100 :VXbV9MLXkXVe>RY8MJ5d2
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Aa
+R35
+R2
+R3
+R4
+Z38 DEx4 work 11 vip_node_tx 0 22 TFhiTQK36i^nnPlm>BK9g0
+l17
+L15
+Z39 Vl^lEZd>Fi@Jd<0[;R5NLP1
+Z40 !s100 1eTm?<QlEGUSHGUAWn?bF2
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Evip_prog
+Z41 w1513692828
+R2
+R3
+R4
+R24
+Z42 8/home/floriant/Projet_3A/RTL//bench/VIP_prog.vhd
+Z43 F/home/floriant/Projet_3A/RTL//bench/VIP_prog.vhd
 l0
 L11
-VM`IVEQlEiREl_J3V?@3i92
-!s100 iCC^]bniC9>N7l6<6bhGC0
+Vng9B=N65LnS1bUd[Mk;dG2
+!s100 1[N6cGbBDmhkcE@[QVK>]0
 R7
 32
 R27
@@ -239,11 +282,11 @@ Aa
 R2
 R3
 R4
-Z37 DEx4 work 8 vip_prog 0 22 M`IVEQlEiREl_J3V?@3i92
-l41
-L26
-Z38 VWBQBX==FQ?E]z3XSnX=iM3
-Z39 !s100 FAi?@Zf8;Zgb8@:EH4G[@2
+Z44 DEx4 work 8 vip_prog 0 22 ng9B=N65LnS1bUd[Mk;dG2
+l39
+L25
+Z45 V?CUKUZ@15N[?m;ZE??]E22
+Z46 !s100 :_bai49Ac30d6zo3QI78_3
 R7
 32
 R27
