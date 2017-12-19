@@ -112,7 +112,7 @@
 
 
 
-A= importfiledsc2 ('cancer.dsc');
+A= importfiledsc2 ('earthquake.dsc');
 
 [m,n]=size(A);
 
