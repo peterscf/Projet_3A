@@ -2,24 +2,11 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Thu Dec 14 10:16:23 2017
-# Process ID: 32297
+# Start of session at: Fri Dec 15 10:25:38 2017
+# Process ID: 6667
 # Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
 # Command line: vivado
 # Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
 # Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_1/project_1.xpr
-update_compile_order -fileset sources_1
-launch_simulation
-launch_simulation
-source bench_tst_cna.tcl
-launch_runs synth_1
-wait_on_run synth_1
-set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1

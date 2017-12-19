@@ -1,0 +1,313 @@
+
+*** Running vivado
+    with args -log ring_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ring_top.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source ring_top.tcl -notrace
+Command: synth_design -top ring_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1966 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1170.176 ; gain = 75.000 ; free physical = 4038 ; free virtual = 16054
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ring_top' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/ring_top.vhd:42]
+INFO: [Synth 8-3491] module 'ring_loop' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:4' bound to instance 'l1' of component 'ring_loop' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/ring_top.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'ring_loop' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:9]
+INFO: [Synth 8-3491] module 'clock_generator_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd:34' bound to instance 'g1' of component 'clock_generator_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'clock_generator_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd:40]
+INFO: [Synth 8-4471] merging register 'tmp_reg' into 'clk_div2_reg' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd:47]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'clock_generator_behavorial' (1#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd:40]
+INFO: [Synth 8-3491] module 'MUX_Behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:34' bound to instance 'm1' of component 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'MUX_Behavorial' (2#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:41]
+INFO: [Synth 8-3491] module 'MUX_Behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:34' bound to instance 'm2' of component 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:62]
+INFO: [Synth 8-3491] module 'MUX_Behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:34' bound to instance 'm3' of component 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:63]
+INFO: [Synth 8-3491] module 'MUX_Behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:34' bound to instance 'm4' of component 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:64]
+INFO: [Synth 8-3491] module 'MUX_Behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd:34' bound to instance 'm5' of component 'MUX_Behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:65]
+INFO: [Synth 8-3491] module 'INV_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:34' bound to instance 'i1' of component 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'INV_behavorial' (3#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:39]
+INFO: [Synth 8-3491] module 'INV_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:34' bound to instance 'i2' of component 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:67]
+INFO: [Synth 8-3491] module 'INV_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:34' bound to instance 'i3' of component 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:68]
+INFO: [Synth 8-3491] module 'INV_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:34' bound to instance 'i4' of component 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:69]
+INFO: [Synth 8-3491] module 'INV_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd:34' bound to instance 'i5' of component 'INV_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:70]
+INFO: [Synth 8-3491] module 'register_behavorial' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/register_behavorial.vhd:34' bound to instance 'r1' of component 'register_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'register_behavorial' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/register_behavorial.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'register_behavorial' (4#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/register_behavorial.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'ring_loop' (5#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:9]
+INFO: [Synth 8-3491] module 'ring_loop' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:4' bound to instance 'l2' of component 'ring_loop' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/ring_top.vhd:94]
+INFO: [Synth 8-3491] module 'ring_loop' declared at '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/imports/vhd/ring_loop.vhd:4' bound to instance 'l3' of component 'ring_loop' [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/ring_top.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'ring_top' (6#1) [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/ring_top.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1212.676 ; gain = 117.500 ; free physical = 4050 ; free virtual = 16066
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1212.676 ; gain = 117.500 ; free physical = 4050 ; free virtual = 16066
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]
+WARNING: [Vivado 12-180] No cells matched 'l1/r1/Q_i_1'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:1]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -of_objects [get_cells l1/r1/Q_i_1]'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'l2/r1/Q_i_1'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:3]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -of_objects [get_cells l2/r1/Q_i_1]'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'l3/r1/Q_i_1'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:5]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -of_objects [get_cells l3/r1/Q_i_1]'. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ring_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ring_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1531.613 ; gain = 0.000 ; free physical = 3796 ; free virtual = 15811
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1532.613 ; gain = 437.438 ; free physical = 3870 ; free virtual = 15886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1532.613 ; gain = 437.438 ; free physical = 3870 ; free virtual = 15886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1532.613 ; gain = 437.438 ; free physical = 3872 ; free virtual = 15888
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1532.613 ; gain = 437.438 ; free physical = 3864 ; free virtual = 15880
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'l1' (ring_loop) to 'l2'
+INFO: [Synth 8-223] decloning instance 'l1' (ring_loop) to 'l3'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock_generator_behavorial 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module MUX_Behavorial 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module register_behavorial 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-582] remapping instance l1i_0/i_12 detected constants or equivalencies not detected during regular propagation - skipping remap
+INFO: [Synth 8-582] remapping instance l1i_0/i_12 detected constants or equivalencies not detected during regular propagation - skipping remap
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1533.613 ; gain = 438.438 ; free physical = 3854 ; free virtual = 15870
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1533.613 ; gain = 438.438 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-582] remapping instance l1i_0/i_12 detected constants or equivalencies not detected during regular propagation - skipping remap
+INFO: [Synth 8-582] remapping instance l1i_0/i_12 detected constants or equivalencies not detected during regular propagation - skipping remap
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1533.613 ; gain = 438.438 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-582] remapping instance i_2 detected constants or equivalencies not detected during regular propagation - skipping remap
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1547.629 ; gain = 452.453 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |FDRE |     3|
+|4     |IBUF |     2|
+|5     |OBUF |     4|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+---------------------------+------+
+|      |Instance |Module                     |Cells |
++------+---------+---------------------------+------+
+|1     |top      |                           |    12|
+|2     |  l1     |ring_loop                  |     5|
+|3     |    g1   |clock_generator_behavorial |     3|
+|4     |    r1   |register_behavorial        |     2|
++------+---------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.633 ; gain = 452.457 ; free physical = 3722 ; free virtual = 15738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1547.633 ; gain = 133.516 ; free physical = 3781 ; free virtual = 15797
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1547.637 ; gain = 452.457 ; free physical = 3783 ; free virtual = 15799
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+46 Infos, 7 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1548.629 ; gain = 466.035 ; free physical = 3751 ; free virtual = 15767
+INFO: [Common 17-1381] The checkpoint '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/ring_top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1548.633 ; gain = 0.000 ; free physical = 3752 ; free virtual = 15768
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 15:28:17 2017...

@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc rfile:../../../project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets -of_objects [get_cells l1/r1/Q_i_1]]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets -of_objects [get_cells l2/r1/Q_i_1]]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets -of_objects [get_cells l3/r1/Q_i_1]]
