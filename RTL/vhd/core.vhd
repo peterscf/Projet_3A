@@ -20,14 +20,12 @@ entity CORE is
 			--entrée pour la MEM      			
 				addr : in std_logic_vector(N_parents downto 0);
       			data_in : in std_logic_vector(9 downto 0);
-				Wen : in std_logic;
+      			Wen : in std_logic;
       			full_in : in std_logic;
       --Port de sortie
 				prog_link_out : out std_logic_vector(N_parents downto 0);
       			full_out : out std_logic;
-				prob_out : out std_logic;
-				data_out : out std_logic_vector(9 downto 0)
-
+				prob_out : out std_logic
 		);
 end CORE;
 
@@ -72,7 +70,7 @@ signal sig_full_in_G : std_logic;
 signal sig_full_in_M: std_logic;
 signal sig_full_out_G : std_logic;
 signal sig_full_out_M : std_logic;
-signal sig_mem_out : std_logic_vector (9 downto 0);
+
 begin
 
 
@@ -103,12 +101,9 @@ begin
 	begin
 		if Wen ='1' then
 			sig_full_in_M <= full_in;
-			data_out <= sig_mem_out;
 		else
 			sig_full_in_G <= full_in;
-			sig_prob <= sig_mem_out;
 		end if;
 	end process;
-
 
 end A;

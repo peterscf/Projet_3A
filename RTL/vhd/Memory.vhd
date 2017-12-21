@@ -1,6 +1,6 @@
 ------------------------------Memory.vhd-----------------------------------------
 --Author: Floriant PETERSCHMITT
---Version: 18/12/2017
+--Version: 11/12/2017
 ------------------------------Memory.vhd-----------------------------------------
 
 library IEEE;
@@ -31,7 +31,7 @@ signal index : unsigned (4 downto 0) ;
 signal index_temp : unsigned (4 downto 0) ;
 
 --tableau MEM
-type MEM is array (0 to 31) of std_logic_vector(9 downto 0);
+type MEM is array (0 to 31) of std_logic_vector(10 downto 0);
 signal Prob: MEM;
 
 begin
