@@ -4,12 +4,12 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.math_real.all;
 entity VIP_Node_TX is
-	generic(N_parents : integer := 10); 
 
+	generic(N_parents : integer := 10);
     port(		clk: in std_logic;
 				reset_n : in std_logic;
 				enable_prog : in std_logic;
-				addr_out : out std_logic_vector (N_parents downto 0)		);
+				addr_out : out std_logic_vector(N_parents downto 0));
 end VIP_Node_TX;
 
 architecture A of VIP_Node_TX is

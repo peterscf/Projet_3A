@@ -5,8 +5,8 @@ Model Technology ModelSim - Intel FPGA Edition vmap 10.5c Lib Mapping Utility 20
 vmap lib_VHD /home/floriant/Projet_3A/RTL/libs/lib_VHD 
 Modifying /home/floriant/Projet_3A/RTL/modelsim.ini
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-Start time: 11:13:17 on Dec 20,2017
-vcom -work lib_VHD /home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd /home/floriant/Projet_3A/RTL/bench/VIP_Node_TX.vhd /home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd 
+Start time: 00:53:49 on Dec 25,2017
+vcom -work lib_VHD /home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd /home/floriant/Projet_3A/RTL/bench/VIP_Node_RX.vhd /home/floriant/Projet_3A/RTL/bench/VIP_Node_TX.vhd /home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd /home/floriant/Projet_3A/RTL/bench/VIP_Rdm_Gen.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -14,10 +14,15 @@ vcom -work lib_VHD /home/floriant/Projet_3A/RTL/bench/VIP_moy.vhd /home/floriant
 -- Compiling entity VIP_moy
 -- Compiling architecture A of VIP_moy
 -- Loading package MATH_REAL
+-- Compiling entity VIP_Node_RX
+-- Compiling architecture A of VIP_Node_RX
 -- Compiling entity VIP_Node_TX
 -- Compiling architecture A of VIP_Node_TX
 -- Compiling entity VIP_prog
 -- Compiling architecture A of VIP_prog
 ** Warning: /home/floriant/Projet_3A/RTL/bench/VIP_prog.vhd(87): (vcom-1272) Length of expected is 10; length of actual is 12.
-End time: 11:13:18 on Dec 20,2017, Elapsed time: 0:00:01
-Errors: 0, Warnings: 1
+-- Compiling entity VIP_Rdm_Gen
+-- Compiling architecture A of VIP_Rdm_Gen
+** Error: /home/floriant/Projet_3A/RTL/bench/VIP_Rdm_Gen.vhd(20): near "EOF": syntax error
+End time: 00:53:50 on Dec 25,2017, Elapsed time: 0:00:01
+Errors: 1, Warnings: 1
