@@ -31,15 +31,15 @@ signal index : unsigned (4 downto 0) ;
 signal index_temp : unsigned (4 downto 0) ;
 
 --tableau MEM
-type MEM is array (0 to 31) of std_logic_vector(10 downto 0);
+type MEM is array (0 to 31) of std_logic_vector(9 downto 0);
 signal Prob: MEM;
 
 begin
 
-P_STATE: process(clk,reset_n) begin
+P_STATE: process(clk) begin
     
     if (clk'event and clk = '1') then
-		if reset_n = '1' then
+		if reset_n = '0' then
 			current_state <= Init; 
 			index<="00000";
 		else 
@@ -50,7 +50,7 @@ P_STATE: process(clk,reset_n) begin
 	end process P_state ;
 
 
-P_Next_State_output : process (Wen, current_state, index, full_in)
+P_Next_State_output : process (Wen, current_state, index, full_in, data_in)
 
 begin
 	   
@@ -59,6 +59,7 @@ begin
 
 	case current_state is								
 						  	when Init => 
+								index_temp <= "00000";
 						  		if Wen ='1' and full_in ='1' then
 									next_state <= Prog; 
 								elsif Wen ='1' and full_in ='0' then
@@ -84,7 +85,7 @@ begin
 									else
 										next_state <= Prog;
 									end if;
-									index_temp <= index + 1;
+									index_temp <= index + "0001";
 									
 							when Idle => 
 								--Fonctionement Mem std

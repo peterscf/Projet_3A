@@ -44,7 +44,7 @@ begin
 P_STATE: process(clk,reset_n) begin
     
     if (clk'event and clk = '1') then
-		if reset_n = '1' then
+		if reset_n = '0' then
 			current_state <= Init; 
 			index<="000";
 		else 
@@ -54,14 +54,14 @@ P_STATE: process(clk,reset_n) begin
 	end if;
 	end process P_state ;
 
-P_Next_State_output : process (Prog_in, current_state, index, full_in)
+P_Next_State_output : process (Prog_in, current_state, index, full_in,prog_link_in)
 
 begin
 
 	full_out <= '0';	
 
 	case current_state is								
-						  	when Init => 
+						  	when Init => index_temp <= "000";
 						  		if Prog_in ='1' and full_in ='1' then
 									next_state <= Prog; 
 								elsif Prog_in ='1' and full_in ='0' then
@@ -81,7 +81,7 @@ begin
 							when Prog => 
 									--remplissage des registre de configuration
 									prog_link_reg(to_integer(index)) <= prog_link_in;
-									if index = "101"  then
+									if index = "010"  then
 										full_out <= '1';
 										next_state <= Idle; 
 									else

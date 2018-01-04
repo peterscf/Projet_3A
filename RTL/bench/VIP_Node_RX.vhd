@@ -11,8 +11,8 @@ entity VIP_Node_RX is
 				reset_n : in std_logic;
 				prog : in std_logic;
 				Wen : in std_logic;
-				prog_link_in : std_logic_vector(N_parents downto 0);
-				data_in : std_logic_vector(9 downto 0);
+				prog_link_in : in std_logic_vector(N_parents downto 0);
+				data_in : in std_logic_vector(9 downto 0);
 				full_out : out std_logic);
 end VIP_Node_RX;
 
@@ -21,22 +21,25 @@ architecture A of VIP_Node_RX is
 
 begin
 
-	process (Wen , prog)
+	process (Wen , prog, data_in, prog_link_in)
 	variable i : integer;
-	begin
-		if prog ='1' then 
+	begin	
+		full_out <='0';
+		if prog ='1' then
 			if prog_link_in'event then 
 				i:= i+1;
 			end if;
 			if i=5 then 
 				full_out <= '1';
+				i:=0;
 			end if;
 		elsif Wen = '1' then 
 			if data_in'event then 
 				i:= i+1;
 			end if;
 			if i=32 then 
-				full_out <= '1';
+				full_out <= '1' ;
+				i:=0;
 			end if;
 		else
 			full_out <='0';

@@ -24,6 +24,8 @@ else
 	vmap lib_VHD ${LIB_DIR}/lib_VHD >> ${LOG_DIR}/compile.log
 	echo "COMPILE VHD"
 	echo "///////////////////////////////////////////////"
-	vcom -work lib_VHD ${VHD_DIR}/*.vhd  >> ${LOG_DIR}/compile.log
+	vcom -work lib_VHD +cover ${VHD_DIR}/*.vhd  >> ${LOG_DIR}/compile.log
 	grep Error ${LOG_DIR}/compile.log
+	grep **Warning ${LOG_DIR}/compile.log
+
 fi

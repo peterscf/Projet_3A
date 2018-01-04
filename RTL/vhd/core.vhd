@@ -25,7 +25,9 @@ entity CORE is
       --Port de sortie
 				prog_link_out : out std_logic_vector(N_parents downto 0);
       			full_out : out std_logic;
-				prob_out : out std_logic
+				prob_out : out std_logic;
+				data_out : out std_logic_vector(9 downto 0)
+
 		);
 end CORE;
 
@@ -41,7 +43,7 @@ architecture A of CORE is
       			Wen : in std_logic;
       			full_in : in std_logic;
       --Port de sortie
-      			data_out : in std_logic_vector(9 downto 0);
+      			data_out : out std_logic_vector(9 downto 0);
       			full_out : out std_logic);
 	end component;
 
@@ -56,7 +58,7 @@ architecture A of CORE is
 					addr_in : in std_logic_vector(N_parents downto 0);
 					full_in : in std_logic;
 			--Port de sortie				
-					addr_out : in std_logic_vector(4 downto 0);
+					addr_out : out std_logic_vector(4 downto 0);
 					full_out : out std_logic;
 					prog_link_out : out std_logic_vector(N_parents downto 0));
 
@@ -65,6 +67,7 @@ architecture A of CORE is
 
 	--déclaration des signaux
 signal sig_addr_MEM : std_logic_vector(4 downto 0);
+signal sig_prob_mem : std_logic_vector(9 downto 0);
 signal sig_prob : std_logic_vector(9 downto 0);
 signal sig_full_in_G : std_logic;
 signal sig_full_in_M: std_logic;
@@ -77,7 +80,7 @@ begin
 	G0 : GATEWAY generic map (N_parents => N_parents)
 	port map (clk, reset_n, prog, prog_link_in,addr, sig_full_in_G, sig_addr_MEM, sig_full_out_G, prog_link_out);
 	
-	MEM0: Memory port map (	clk,reset_n, sig_addr_MEM, data_in, Wen, sig_full_in_M, sig_prob, sig_full_out_M);
+	MEM0: Memory port map (	clk,reset_n, sig_addr_MEM, data_in, Wen, sig_full_in_M, sig_prob_mem, sig_full_out_M);
 
 	compare :process(sig_prob,rdm_gene_in)
 	begin
@@ -88,7 +91,7 @@ begin
 		end if;
 	end process;
 
-	MUX:process(prog)
+	MUX:process(prog, sig_full_out_G, sig_full_out_M)
 	begin
 		if prog = '1' then 
 			full_out <= sig_full_out_G;
@@ -97,12 +100,20 @@ begin
 		end if;
 	end process;
 
-	DEMUX: process(Wen)
+	DEMUX: process(Wen, full_in)
 	begin
 		if Wen ='1' then
 			sig_full_in_M <= full_in;
 		else
 			sig_full_in_G <= full_in;
+		end if;
+	end process;
+	DEMUX_Data_out:process(Wen, sig_prob_mem)
+	begin
+		if Wen = '1' then 
+			data_out <= sig_prob_mem;
+		else 
+			sig_prob <= sig_prob_mem;
 		end if;
 	end process;
 

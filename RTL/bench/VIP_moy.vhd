@@ -32,7 +32,7 @@ end process;
 
 --out calculus
 
-prob_out <= accu_one / accu_total;
+--prob_out <= accu_one / accu_total;
 
 
 	end A;
