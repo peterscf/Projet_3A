@@ -25,7 +25,7 @@ entity GATEWAY is
 end GATEWAY;
 
 architecture A of GATEWAY is
-	type STATE is (Init,Prog,Idle,Bypass);
+	type STATE is (Init,Prog,Idle,Bypass, wait_idle);
 	signal current_state : STATE;
 	signal next_state : STATE;
 	
@@ -54,7 +54,7 @@ P_STATE: process(clk,reset_n) begin
 	end if;
 	end process P_state ;
 
-P_Next_State_output : process (Prog_in, current_state, index, full_in,prog_link_in)
+P_Next_State_output : process (Prog_in, current_state, index, full_in,prog_link_in, addr_in)
 
 begin
 
@@ -81,14 +81,21 @@ begin
 							when Prog => 
 									--remplissage des registre de configuration
 									prog_link_reg(to_integer(index)) <= prog_link_in;
-									if index = "010"  then
+									if index = "100"  then
 										full_out <= '1';
-										next_state <= Idle; 
+										next_state <= Wait_idle;
 									else
 										next_state <= Prog;
 									end if;
 									index_temp <= index + 1;
-									
+							
+							when wait_idle =>
+								full_out <= '1';
+								if Prog_in = '0' then 
+									next_state <=Idle;
+								else 
+									next_state <= current_state;
+								end if;
 							when Idle => 
 								--Fonctionement gateway std
 							  	addr_out(0) <= addr_in(to_integer(unsigned(prog_link_reg(0))));

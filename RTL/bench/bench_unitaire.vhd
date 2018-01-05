@@ -67,7 +67,7 @@ architecture test1 of test_unitaire is
     port(	clk: in std_logic;
 			reset_n : in std_logic;
 			prob_in : in std_logic;
-			prob_out : out integer			
+			prob_out : out real		
 		);
 	end component; 	
 
@@ -112,7 +112,7 @@ signal sig_data_out : std_logic_vector (9 downto 0);
 signal sig_prob_out : std_logic;
 
 signal sig_enable_prog : std_logic :='1';
-signal sig_result : integer;
+signal sig_result : real;
 signal sig_clk : std_logic :='0';
 signal sig_reset_n : std_logic :='0';
 

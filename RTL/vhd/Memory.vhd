@@ -23,7 +23,7 @@ entity Memory is
 end Memory;
 
 architecture A of Memory is
-type STATE is (Init,Prog,Idle,Bypass);
+type STATE is (Init,Prog,Idle,Bypass, wait_idle);
 signal current_state : STATE;
 signal next_state : STATE;
 
@@ -50,7 +50,7 @@ P_STATE: process(clk) begin
 	end process P_state ;
 
 
-P_Next_State_output : process (Wen, current_state, index, full_in, data_in)
+P_Next_State_output : process (Wen, current_state, index, full_in, data_in, addr)
 
 begin
 	   
@@ -81,12 +81,20 @@ begin
 									Prob(to_integer(index)) <= data_in;
 									if index = "11111"  then
 										full_out <= '1';
-										next_state <= Idle; 
+										next_state <= wait_idle; 
 									else
 										next_state <= Prog;
 									end if;
 									index_temp <= index + "0001";
-									
+							
+							when wait_idle =>
+								full_out <= '1';
+								if Wen = '0' then 
+									next_state <=Idle;
+								else 
+									next_state <= current_state;
+								end if;
+			
 							when Idle => 
 								--Fonctionement Mem std
 							  data_out <= Prob(to_integer(unsigned(addr)));

@@ -29,7 +29,7 @@ rand_num := integer(rand1*range_of_rand1);  -- rescale to 0..2 pow 10, convert i
 
 
     if (clk'event and clk = '1') then
-		if reset_n = '1' then
+		if reset_n = '0' then
 			addr_out <= std_logic_vector (to_unsigned(zero,addr_out'length));
 		else 
 			if enable_prog = '0' then
@@ -40,7 +40,22 @@ rand_num := integer(rand1*range_of_rand1);  -- rescale to 0..2 pow 10, convert i
 		end if;
 	end if;
 	end process send ;
-
+--	process(clk)
+--	begin
+--		if (clk'event and clk = '1') then
+--			if reset_n = '0' then
+--			addr_out <= std_logic_vector (to_unsigned(0,addr_out'length));
+--			else
+--				if enable_prog = '0' then
+--					addr_out <= "00000000011";
+--	
+--				else
+--					addr_out <= "00000000000";
+--			end if;
+--		end if;
+--	end if;
+--
+--	end process;
 
 end A;
 

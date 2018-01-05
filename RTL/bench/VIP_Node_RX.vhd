@@ -21,29 +21,29 @@ architecture A of VIP_Node_RX is
 
 begin
 
-	process (Wen , prog, data_in, prog_link_in)
+	process (Wen , prog, data_in, prog_link_in,clk)
 	variable i : integer;
 	begin	
 		full_out <='0';
 		if prog ='1' then
-			if prog_link_in'event then 
+			if prog_link_in'event then --or (clk'event and clk='1') then 
 				i:= i+1;
 			end if;
-			if i=5 then 
+			if i>4 then 
 				full_out <= '1';
-				i:=0;
+			--	i:=0;
 			end if;
 		elsif Wen = '1' then 
-			if data_in'event then 
+			if data_in'event or (clk'event and clk='1')then 
 				i:= i+1;
 			end if;
-			if i=32 then 
+			if i>31 then 
 				full_out <= '1' ;
-				i:=0;
+				--i:=-1;
 			end if;
 		else
 			full_out <='0';
-			i:=0;
+			i:=-1;
 		end if;
 
 
