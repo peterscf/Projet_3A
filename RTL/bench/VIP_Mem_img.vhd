@@ -64,7 +64,7 @@ begin
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
  LECTURE_MEM: process
 	variable L: line;
-	file ENTREES : text open read_mode is "./bench/MEM.img";
+	file ENTREES : text open read_mode is "./bench/Alarm/MEM.img";
 	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (3 downto 1);
 	variable i: integer :=0;
@@ -87,7 +87,7 @@ begin
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
  LECTURE_GW: process
 	variable L: line;
-	file ENTREES : text open read_mode is "./bench/GW.img";
+	file ENTREES : text open read_mode is "./bench/Alarm/GW.img";
 	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (3 downto 1);
 	variable i: integer :=0;

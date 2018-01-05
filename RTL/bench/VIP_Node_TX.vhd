@@ -16,46 +16,46 @@ architecture A of VIP_Node_TX is
 
 begin
 
-send: process(clk,reset_n,enable_prog) 
-    variable seed1, seed2: positive;               -- seed values for random generator
-    variable rand1 : real;   -- random real-number value in range 0 to 1.0  
-    variable range_of_rand1 : real := 1023.0;    -- the range of random values created will be 0 to 2pow10.
-	variable rand_num : integer := 0;
-	variable zero : integer :=0;
-begin
+--send: process(clk,reset_n,enable_prog) 
+--    variable seed1, seed2: positive;               -- seed values for random generator
+--    variable rand1 : real;   -- random real-number value in range 0 to 1.0  
+--    variable range_of_rand1 : real := 1023.0;    -- the range of random values created will be 0 to 2pow10.
+--	variable rand_num : integer := 0;
+--	variable zero : integer :=0;
+--begin
+--
+--uniform(seed1, seed2, rand1);   -- generate random number
+--rand_num := integer(rand1*range_of_rand1);  -- rescale to 0..2 pow 10, convert integer part
 
-uniform(seed1, seed2, rand1);   -- generate random number
-rand_num := integer(rand1*range_of_rand1);  -- rescale to 0..2 pow 10, convert integer part
 
-
-    if (clk'event and clk = '1') then
-		if reset_n = '0' then
-			addr_out <= std_logic_vector (to_unsigned(zero,addr_out'length));
-		else 
-			if enable_prog = '0' then
-				addr_out <= std_logic_vector (to_unsigned(rand_num,addr_out'length));	
-			else
-				addr_out <= std_logic_vector (to_unsigned(zero,addr_out'length));
-			end if;
-		end if;
-	end if;
-	end process send ;
---	process(clk)
---	begin
---		if (clk'event and clk = '1') then
---			if reset_n = '0' then
---			addr_out <= std_logic_vector (to_unsigned(0,addr_out'length));
+--    if (clk'event and clk = '1') then
+--		if reset_n = '0' then
+--			addr_out <= std_logic_vector (to_unsigned(zero,addr_out'length));
+--		else 
+--			if enable_prog = '0' then
+--				addr_out <= std_logic_vector (to_unsigned(rand_num,addr_out'length));	
 --			else
---				if enable_prog = '0' then
---					addr_out <= "00000000011";
---	
---				else
---					addr_out <= "00000000000";
+--				addr_out <= std_logic_vector (to_unsigned(zero,addr_out'length));
 --			end if;
 --		end if;
 --	end if;
---
---	end process;
+--	end process send ;
+	process(clk)
+	begin
+		if (clk'event and clk = '1') then
+			if reset_n = '0' then
+			addr_out <= std_logic_vector (to_unsigned(0,addr_out'length));
+			else
+				if enable_prog = '0' then
+					addr_out <= "00000000000";
+	
+				else
+					addr_out <= "00000000000";
+			end if;
+		end if;
+	end if;
+
+	end process;
 
 end A;
 
