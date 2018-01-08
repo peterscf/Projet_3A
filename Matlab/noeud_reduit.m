@@ -9,7 +9,7 @@ classdef noeud_reduit
         
         nom
         parents
-        layer_level % profondeur egale à la profondeur du parent le plus bas +1
+        layer_level % profondeur egale ï¿½ la profondeur du parent le plus bas +1
         %     child_depth % indique combien il y a de profondeur d'enfant en dessous
         %     parent_depth % indique le nombre de niveau de parent au dessus
         %
@@ -36,8 +36,14 @@ classdef noeud_reduit
         %       end
         
         %%%%%%%%%%  Constructeur   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
         function nd = noeud_reduit(nom,parents,probabilite,theta)
-            if nargin > 0
+%             if nargin ~= 4
+%                 i = size(nom);
+%                 nd(i) = noeud_reduit;
+%             end
+            
+            if nargin >0
                 nd.nom = nom;
                 nd.parents = parents;
                 nd.probabilite = probabilite;

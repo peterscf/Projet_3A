@@ -247,7 +247,7 @@ indice_liste=1;
 for i=1:layer_size(1) %les parents bitstream memoire coef
 
     Noeud_courrant = liste_noeuds(indice_liste);
-    a = fi((Noeud_courrant.probabilite(2)*1000),0,10,0);
+    a = fi(Noeud_courrant.probabilite(2),0,10,10);
     Tampon_binaire=a.bin;% Ceci est un string de 1 et 0
 
     Tampon_conv_string2numb(:)=str2num(Tampon_binaire(:));
@@ -272,7 +272,7 @@ for n=2:layer
         Noeud_courrant = liste_noeuds(indice_liste);
         [Q,L]=size(Noeud_courrant.theta);
         for J=1:L
-            a = fi(Noeud_courrant.theta(J)*1000,0,10,0);
+            a = fi(Noeud_courrant.theta(J),0,10,10);
             Tampon_binaire=a.bin;% Ceci est un string de 1 et 0
             
             Tampon_conv_string2numb(:)=str2num(Tampon_binaire(:));
@@ -328,25 +328,9 @@ end
 
 % convertir en hexadecimal
 
-memoire_hex = memoire;
-t=memoire_hex(:,10,:);
-reshape
 
-t = reshape(t,[32,10,:])
-
-memoire_hex = num2str(memoire)
-
-f=num2str(memoire (1,:,1))
-
-g=bin2dec(f)
-
-dec2hex(g)
-
-
-s = num2str(A)
-
-memoire_hex = binaryVectorToHex(memoire)
-
-str = dec2hex(g)
+% memoire_hex = binaryVectorToHex(memoire)
+% 
+% str = dec2hex(d)
 
 toc
