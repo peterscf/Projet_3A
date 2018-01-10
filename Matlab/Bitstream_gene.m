@@ -327,26 +327,54 @@ for n=2:layer
 end
 
 % convertir en hexadecimal
+% memoire = zeros (32,10,nb_noeud);
+memoire_hex = zeros (32*nb_noeud,10);
 
-memoire_hex = memoire;
-t=memoire_hex(:,10,:);
-reshape
+ 
+for n=1:1:nb_noeud
+    for u=1:1:32
+        memoire_hex((u+((n-1)*32)),:) = memoire(u,:,n);
+%         for k=1:1:10
+%             memoire_hex((u*n),k) = memoire(u,k,n);
+%         end
 
-t = reshape(t,[32,10,:])
+    end
+end
 
-memoire_hex = num2str(memoire)
+memoire_hex = num2str(memoire_hex);
 
-f=num2str(memoire (1,:,1))
+memoire_hex=bin2dec(memoire_hex);
 
-g=bin2dec(f)
+memoire_hex=dec2hex(memoire_hex);
 
-dec2hex(g)
+memoire_hex_inv =memoire_hex;
 
+for m=1:1:32*nb_noeud
+    memoire_hex_inv(m,:) = memoire_hex (32*nb_noeud-m+1,:) ;
+end
 
-s = num2str(A)
-
-memoire_hex = binaryVectorToHex(memoire)
-
-str = dec2hex(g)
-
-toc
+%         cat(2,memoire_hex((u+((n-1)*32)),:));
+% 
+% t=memoire_hex(:,10,:);
+% reshape
+% 
+% t = reshape(t,[32,10,:])
+% 
+% memoire_hex = num2str(memoire_hex)
+% 
+% 
+% 
+% f=num2str(memoire (1,:,1))
+% 
+% g=bin2dec(f)
+% 
+% dec2hex(g)
+% 
+% 
+% s = num2str(A)
+% 
+% memoire_hex = binaryVectorToHex(memoire)
+% 
+% str = dec2hex(g)
+% 
+% toc
