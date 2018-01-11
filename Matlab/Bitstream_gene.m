@@ -14,7 +14,7 @@ A= importfiledsc2 ('earthquake.dsc');
 [m,n]=size(A);
 
 %definissez la taille du FPBN
-layer=4; 
+layer=3; 
 largeur=2;
 
 
@@ -352,6 +352,8 @@ memoire_hex_inv =memoire_hex;
 for m=1:1:32*nb_noeud
     memoire_hex_inv(m,:) = memoire_hex (32*nb_noeud-m+1,:) ;
 end
+
+dlmwrite('MEM.img', memoire_hex_inv);
 
 %         cat(2,memoire_hex((u+((n-1)*32)),:));
 % 
