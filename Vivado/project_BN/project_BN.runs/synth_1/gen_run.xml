@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1513693668">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1513856588">
   <File Type="VDS-TIMING-PB" Name="ring_top_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="ring_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="ring_top.dcp"/>
@@ -10,6 +10,12 @@
   <File Type="PA-TCL" Name="ring_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Correcteur_XOR_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/INV_behavorial.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -48,7 +54,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Correcteur_XOR_behavorial.vhd">
+    <File Path="$PSRCDIR/sources_1/new/XOR_behavorial.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

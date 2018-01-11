@@ -334,10 +334,6 @@ memoire_hex = zeros (32*nb_noeud,10);
 for n=1:1:nb_noeud
     for u=1:1:32
         memoire_hex((u+((n-1)*32)),:) = memoire(u,:,n);
-%         for k=1:1:10
-%             memoire_hex((u*n),k) = memoire(u,k,n);
-%         end
-
     end
 end
 
@@ -355,6 +351,28 @@ end
 
 dlmwrite('MEM.img', memoire_hex_inv);
 
+
+gateway_hex = zeros (5*nb_noeud,3);
+
+for n=1:1:nb_noeud
+    for u=1:1:5
+        gateway_hex((u+((n-1)*5)),:) = gateway(u,:,n);
+    end
+end
+
+gateway_hex = num2str(gateway_hex);
+
+gateway_hex=bin2dec(gateway_hex);
+
+gateway_hex=dec2hex(gateway_hex);
+
+gateway_hex_inv =gateway_hex;
+
+for m=1:1:5*nb_noeud
+    gateway_hex_inv(m,:) = gateway_hex (5*nb_noeud-m+1,:) ;
+end
+
+dlmwrite('GW.img', gateway_hex_inv);
 %         cat(2,memoire_hex((u+((n-1)*32)),:));
 % 
 % t=memoire_hex(:,10,:);

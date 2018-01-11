@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Tue Dec 19 13:49:33 2017
-# Process ID: 22817
+# Start of session at: Thu Dec 21 10:53:17 2017
+# Process ID: 4522
 # Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
 # Command line: vivado
 # Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
@@ -12,11 +12,24 @@
 start_gui
 open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
 update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/Correcteur_XOR_behavorial.vhd]
+close [ open /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/XOR_behavorial.vhd w ]
+add_files /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/XOR_behavorial.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 open_hw
@@ -35,11 +48,9 @@ launch_runs synth_1
 wait_on_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
+launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
+reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
@@ -47,12 +58,9 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property is_enabled true [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/Correcteur_XOR_behavorial.vhd]
+update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
@@ -60,34 +68,53 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
+endgroup
+delete_bd_objs [get_bd_cells blk_mem_gen_0]
+remove_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/bd/design_1/design_1.bd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
@@ -97,5 +124,11 @@ program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/ring_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210248782234}

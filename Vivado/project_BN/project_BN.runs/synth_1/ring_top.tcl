@@ -16,6 +16,7 @@ set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_output_repo /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/Correcteur_XOR_behavorial.vhd
   /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd
   /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd
   /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd

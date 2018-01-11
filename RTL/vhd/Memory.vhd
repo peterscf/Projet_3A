@@ -50,7 +50,7 @@ P_STATE: process(clk) begin
 	end process P_state ;
 
 
-P_Next_State_output : process (Wen, current_state, index, full_in, data_in, addr)
+P_Next_State_output : process (Wen, current_state, index, full_in, data_in, addr,Prob)
 
 begin
 	   
