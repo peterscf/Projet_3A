@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../test_cna.vhd"
-vhdl xil_defaultlib  "../../../bench_tst_cna.vhd"
-
-# Do not sort compile order
-nosort

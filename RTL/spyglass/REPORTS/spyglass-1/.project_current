@@ -1,0 +1,24 @@
+##Data Import Section
+
+read_file -type vhdl ../../vhd/core.vhd
+read_file -type vhdl ../../vhd/gateway.vhd
+read_file -type vhdl ../../vhd/Memory.vhd
+read_file -type vhdl ../../vhd/network.vhd
+read_file -type awl ./spyglass-1/spyglass-1_waiver_file.awl
+
+##Common Options Section
+
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_enable_synthesis no
+set_option designread_disable_flatten no
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+current_goal lint/lint_rtl -alltop
+set_goal_option report_incr_messages yes
+

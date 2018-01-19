@@ -1,0 +1,2 @@
+WRN_612@@WRN_612@@LangWarning@@0@@../../vhd/gateway.vhd@@1000@@Source file "/tp/xph3app/xph3app604/Projet_3A/RTL/vhd/gateway.vhd" is newer than it's pre-compiled (library) dump, please recompile this file; otherwise it may lead to incorrect elaboration errors
+WRN_612@@WRN_612@@LangWarning@@0@@../../vhd/Memory.vhd@@1000@@Source file "/tp/xph3app/xph3app604/Projet_3A/RTL/vhd/Memory.vhd" is newer than it's pre-compiled (library) dump, please recompile this file; otherwise it may lead to incorrect elaboration errors

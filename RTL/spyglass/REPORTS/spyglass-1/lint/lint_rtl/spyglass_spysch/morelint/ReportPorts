@@ -1,0 +1,13 @@
+SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
+VALUE@@clk@@INPUT@@0@@0@@-@@Network@@No
+VALUE@@reset_n@@INPUT@@0@@0@@-@@Network@@No
+VALUE@@rdm_gene_in@@INPUT@@9@@0@@uniquement pour debug@@Network@@No
+VALUE@@prog_link_in@@INPUT@@10@@0@@-@@Network@@No
+VALUE@@prog@@INPUT@@0@@0@@-@@Network@@No
+VALUE@@addr_1@@INPUT@@10@@0@@entrée pour la MEM      			@@Network@@No
+VALUE@@addr_2@@INPUT@@10@@0@@-@@Network@@No
+VALUE@@data_in@@INPUT@@9@@0@@-@@Network@@No
+VALUE@@Wen@@INPUT@@0@@0@@-@@Network@@No
+VALUE@@full_out@@OUTPUT@@0@@0@@Port de sortie@@Network@@No
+VALUE@@prob_out_1@@OUTPUT@@0@@0@@-@@Network@@No
+VALUE@@prob_out_2@@OUTPUT@@0@@0@@-@@Network@@No

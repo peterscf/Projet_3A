@@ -1,0 +1,76 @@
+read_file -type vhdl {../../vhd/core.vhd ../../vhd/gateway.vhd ../../vhd/Memory.vhd ../../vhd/network.vhd}
+
+
+
+current_goal Design_Read -alltop
+
+
+link_design -force
+
+foreach_in_collection i [ get_messages -of_rule [get_rules DetectTopDesignUnits] ] { if { [get_attribute $i msg] ==  "{Architecture Network.A is a top level design unit}"} { gui_select_message $i ;break; } }
+capture ./spyglass-1/Design_Read/spyglass_reports/spyglass_violations.rpt {write_report spyglass_violations}
+read_file -type awl ./spyglass-1/Design_Read/spyglass-1_waiver_file.awl
+set_goal_option default_waiver_file ./spyglass-1/Design_Read/spyglass-1_waiver_file.awl
+waive -du Network.A -rule ALL -comment {Created by xph3app604 on 08-Jan-2018 10:42:11}
+
+save_waiver
+
+
+
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+current_goal lint/lint_abstract -alltop
+run_goal
+current_goal lint/lint_rtl -alltop
+
+
+
+
+
+
+foreach_in_collection i [ get_messages -of_rule [get_rules W122] ] { if { [get_attribute $i msg] ==  "{The signal 'prog_link_reg' (or some of its bits) read in the process is not in the process sensitivity list. \[Hierarchy: ':Network(A):N1@CORE(A):G0@GATEWAY(A):P_Next_State_output:'\]}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules W122] ] { if { [get_attribute $i msg] ==  "{The signal 'Prob' (or some of its bits) read in the process is not in the process sensitivity list. \[Hierarchy: ':Network(A):N1@CORE(A):MEM0@Memory(A):P_Next_State_output:'\]}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'Prob\[0\]\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'prog_link_reg\[0\]\[3:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'data_out\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules W122] ] { if { [get_attribute $i msg] ==  "{The signal 'Prob' (or some of its bits) read in the process is not in the process sensitivity list. \[Hierarchy: ':Network(A):N1@CORE(A):MEM0@Memory(A):P_Next_State_output:'\]}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules W122] ] { if { [get_attribute $i msg] ==  "{The signal 'Prob' (or some of its bits) read in the process is not in the process sensitivity list. \[Hierarchy: ':Network(A):N1@CORE(A):MEM0@Memory(A):P_Next_State_output:'\]}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules W122] ] { if { [get_attribute $i msg] ==  "{The signal 'prog_link_reg' (or some of its bits) read in the process is not in the process sensitivity list. \[Hierarchy: ':Network(A):N1@CORE(A):G0@GATEWAY(A):P_Next_State_output:'\]}"} { gui_select_message $i ;break; } }
+set_goal_option report_incr_messages yes
+run_goal
+
+
+
+
+current_goal Design_Read -alltop
+
+
+link_design -force
+
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+current_goal lint/lint_abstract -alltop
+run_goal
+current_goal lint/lint_rtl -alltop
+
+
+
+
+
+
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'Prob\[0\]\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'addr_out\[4\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'prog_link_out\[10:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'sig_full_in_M' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'sig_prob\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'data_out\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'sig_prob\[9:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'sig_full_in_G' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'sig_full_in_M' in module 'A'}"} { gui_select_message $i ;break; } }
+foreach_in_collection i [ get_messages -of_rule [get_rules InferLatch] ] { if { [get_attribute $i msg] ==  "{Latch inferred for signal 'index_temp\[4:0\]' in module 'A'}"} { gui_select_message $i ;break; } }
+gui_exit
+gui_exit

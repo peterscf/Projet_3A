@@ -1,1 +1,0 @@
--wto "c7f35dab79af4fbf94ffc538e99b6d15" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "bench_tst_cna_behav" "xil_defaultlib.bench_tst_cna" -log "elaborate.log" 

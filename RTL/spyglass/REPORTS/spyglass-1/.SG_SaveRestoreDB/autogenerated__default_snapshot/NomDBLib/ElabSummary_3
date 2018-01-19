@@ -1,0 +1,29 @@
+================================================================================
+Elaborated Name: 'core'
+    (RTL Design Unit name: 'CORE', ../../vhd/core.vhd:11)
+     Parameters (Total: 1)
+	       N_parents = 10 (default: 10)
+     Instances (Total: 6): Network.N6, Network.N5, Network.N4, Network.N3, Network.N2  ... more
+
+================================================================================
+
+Elaborated Name: 'gateway'
+    (RTL Design Unit name: 'GATEWAY', ../../vhd/gateway.vhd:11)
+     Parameters (Total: 1)
+	       N_parents = 10 (default: 10)
+     Instances (Total: 6): Network.N6.G0, Network.N5.G0, Network.N4.G0, Network.N3.G0, Network.N2.G0  ... more
+
+================================================================================
+
+Elaborated Name: 'memory'
+    (RTL Design Unit name: 'Memory', ../../vhd/Memory.vhd:11)
+     Parameters (Total: 0)
+     Instances (Total: 6): Network.N6.MEM0, Network.N5.MEM0, Network.N4.MEM0, Network.N3.MEM0, Network.N2.MEM0  ... more
+
+================================================================================
+
+Elaborated Name: 'Network'
+    (RTL Design Unit name: 'Network', ../../vhd/network.vhd:11)
+     Parameters (Total: 1)
+	       N_parents = 10 (default: 10)
+================================================================================

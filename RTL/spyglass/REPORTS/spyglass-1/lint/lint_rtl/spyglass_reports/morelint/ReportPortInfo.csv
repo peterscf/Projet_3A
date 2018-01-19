@@ -1,0 +1,13 @@
+Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
+Network,Top_Level,clk,INPUT,1,-,port definition,- 
+Network,Top_Level,reset_n,INPUT,1,-,port definition,- 
+Network,Top_Level,rdm_gene_in,INPUT,10,(9:0),port definition,uniquement pour debug 
+Network,Top_Level,prog_link_in,INPUT,11,(10:0),port definition,- 
+Network,Top_Level,prog,INPUT,1,-,port definition,- 
+Network,Top_Level,addr_1,INPUT,11,(10:0),port definition,entrée pour la MEM      			 
+Network,Top_Level,addr_2,INPUT,11,(10:0),port definition,- 
+Network,Top_Level,data_in,INPUT,10,(9:0),port definition,- 
+Network,Top_Level,Wen,INPUT,1,-,port definition,- 
+Network,Top_Level,full_out,OUTPUT,1,-,port definition,Port de sortie 
+Network,Top_Level,prob_out_1,OUTPUT,1,-,port definition,- 
+Network,Top_Level,prob_out_2,OUTPUT,1,-,port definition,- 
