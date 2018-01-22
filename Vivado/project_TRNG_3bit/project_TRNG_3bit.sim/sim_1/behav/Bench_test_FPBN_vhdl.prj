@@ -1,0 +1,5 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd"
+
+# Do not sort compile order
+nosort

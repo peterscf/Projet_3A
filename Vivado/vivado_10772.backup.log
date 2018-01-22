@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jan 15 12:08:19 2018
+# Process ID: 10772
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3app/xph3app604/Projet_3A/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 5985.203 ; gain = 84.754 ; free physical = 1818 ; free virtual = 13098
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 12:09:21 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 12:09:21 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 12:29:56 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 12:29:56 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 12:44:16 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 12:44:16 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 12:50:56 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 12:50:56 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Mon Jan 15 12:53:45 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 12:57:55 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 12:57:55 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Mon Jan 15 13:23:39 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+[Mon Jan 15 13:23:39 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+exit

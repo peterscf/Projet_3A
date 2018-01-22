@@ -1,0 +1,323 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Thu Jan 18 12:02:54 2018
+| Host         : cimeld15 running 64-bit Debian GNU/Linux 7.8 (wheezy)
+| Command      : report_control_sets -verbose -file FPBN_top_control_sets_placed.rpt
+| Design       : FPBN_top
+| Device       : xc7z020
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   256 |
+| Unused register locations in slices containing registers |   535 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1420 |          616 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             403 |          121 |
+| Yes          | No                    | No                     |             162 |           58 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              64 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+-------------------------------------------------+--------------------------------+------------------+----------------+
+|                  Clock Signal                  |                  Enable Signal                  |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++------------------------------------------------+-------------------------------------------------+--------------------------------+------------------+----------------+
+|  netW/N4/N1/G0/prog_link_reg[2]_48             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_reg[4]_82             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_reg[3]_83             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_reg[2]_84             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_reg[1]_85             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_reg[0]_86             |                                                 |                                |                1 |              1 |
+|  netW/N5/N1/G0/prog_link_out_reg[0]_i_1__2_n_0 |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/prog_link_out_reg[0]_i_1__1_n_0 |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/prog_link_reg[0]_50             |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/prog_link_reg[1]_49             |                                                 |                                |                1 |              1 |
+|  programmeur/out[3]                            |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/prog_link_reg[3]_47             |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/prog_link_reg[4]_46             |                                                 |                                |                1 |              1 |
+|  netW/N2/N1/G0/prog_link_out_reg[0]_i_1_n_0    |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_reg[4]_10             |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_reg[3]_11             |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_reg[2]_12             |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_reg[1]_13             |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_reg[0]_14             |                                                 |                                |                1 |              1 |
+|  netW/N3/N1/G0/prog_link_out_reg[0]_i_1__0_n_0 |                                                 |                                |                1 |              1 |
+|  netW/N6/N1/G0/prog_link_reg[4]_118            |                                                 |                                |                1 |              1 |
+|  netW/N6/N1/G0/prog_link_reg[3]_119            |                                                 |                                |                1 |              1 |
+|  netW/N6/N1/G0/prog_link_reg[2]_120            |                                                 |                                |                1 |              1 |
+|  netW/N6/N1/G0/prog_link_reg[1]_121            |                                                 |                                |                1 |              1 |
+|  netW/N1/N1/G0/prog_link_out_reg[0]_i_1__4_n_0 |                                                 |                                |                1 |              1 |
+|  netW/N6/N1/G0/prog_link_reg[0]_122            |                                                 |                                |                1 |              1 |
+|  netW/N4/N1/G0/index_temp_reg[2]_i_2__2_n_0    |                                                 |                                |                1 |              3 |
+|  netW/N5/N1/G0/index_temp_reg[2]_i_2__3_n_0    |                                                 |                                |                1 |              3 |
+|  netW/N3/N1/G0/index_temp_reg[2]_i_2__1_n_0    |                                                 |                                |                1 |              3 |
+|  netW/N2/N1/G0/index_temp_reg[2]_i_2__0_n_0    |                                                 |                                |                1 |              3 |
+|  netW/N6/N1/G0/__6/i__n_0                      |                                                 |                                |                1 |              3 |
+|  netW/N1/N1/G0/index_temp_reg[2]_i_2_n_0       |                                                 |                                |                1 |              3 |
+|  netW/N6/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r0/g1/clk_delay                    |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N6/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N5/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N4/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r2/g1/clk_delay_1                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r8/g1/clk_delay_7                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r1/g1/clk_delay_0                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r9/g1/clk_delay_8                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r5/g1/clk_delay_4                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r6/g1/clk_delay_5                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r4/g1/clk_delay_3                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N1/R1/r3/g1/clk_delay_2                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N2/R1/r7/g1/clk_delay_6                  |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              4 |
+|  netW/N3/N1/G0/addr_out_reg[4]_i_2_n_0         |                                                 |                                |                2 |              5 |
+|  netW/N3/N1/MEM0/index_temp_reg[4]_i_2__1_n_0  |                                                 |                                |                2 |              5 |
+|  netW/N6/N1/G0//i__n_0                         |                                                 |                                |                2 |              5 |
+|  netW/N5/N1/MEM0/index_temp_reg[4]_i_2__3_n_0  |                                                 |                                |                2 |              5 |
+|  netW/N2/N1/MEM0/index_temp_reg[4]_i_2__0_n_0  |                                                 |                                |                2 |              5 |
+|  netW/N6/N1/MEM0/index_temp_reg[4]_i_2__4_n_0  |                                                 |                                |                2 |              5 |
+|  netW/N4/N1/MEM0/index_temp_reg[4]_i_2__2_n_0  |                                                 |                                |                2 |              5 |
+|  netW/N4/N1/G0/addr_out_reg[4]_i_2__0_n_0      |                                                 |                                |                2 |              5 |
+|  netW/N5/N1/G0/addr_out_reg[4]_i_2__1_n_0      |                                                 |                                |                2 |              5 |
+|  netW/N1/N1/MEM0/index_temp_reg[4]_i_2_n_0     |                                                 |                                |                2 |              5 |
+|  clk_IBUF_BUFG                                 | vip_moy1/D1/counter[5]_i_1_n_0                  |                                |                2 |              6 |
+|  clk_IBUF_BUFG                                 | programmeur/FSM_onehot_current_state[5]_i_1_n_0 | netW/N6/N1/MEM0/index_reg[4]_0 |                1 |              6 |
+|  clk_IBUF_BUFG                                 | vip_moy2/D1/counter[5]_i_1__0_n_0               |                                |                2 |              6 |
+|  netW/N5/N1/MEM0/Prob[7]_111                   |                                                 |                                |                5 |              8 |
+|  netW/N6/N1/MEM0/Prob[12]_142                  |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[0]__0                    |                                                 |                                |                4 |              8 |
+|  netW/N5/N1/MEM0/Prob[31]_87                   |                                                 |                                |                4 |              8 |
+|  netW/N5/N1/MEM0/Prob[3]_115                   |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[24]_58                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[8]_74                    |                                                 |                                |                5 |              8 |
+|  netW/N4/N1/MEM0/Prob[9]_73                    |                                                 |                                |                5 |              8 |
+|  netW/N5/N1/MEM0/Prob[4]_114                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[5]_113                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[6]_112                   |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[26]_56                   |                                                 |                                |                4 |              8 |
+|  netW/N5/N1/MEM0/Prob[8]_110                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[9]_109                   |                                                 |                                |                5 |              8 |
+|  netW/N5/N1/MEM0/data_out_reg[9]_i_2__3_n_0    |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[29]_89                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[11]_71                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[10]_72                   |                                                 |                                |                6 |              8 |
+|  netW/N4/N1/MEM0/Prob[12]_70                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[7]_75                    |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[27]_55                   |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[9]_145                   |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[2]_152                   |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[30]_124                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[31]_123                  |                                                 |                                |                5 |              8 |
+|  netW/N6/N1/MEM0/Prob[3]_151                   |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[4]_150                   |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[5]_149                   |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[6]_148                   |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[7]_147                   |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[8]_146                   |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[29]_125                  |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/data_out_reg[9]_i_2__4_n_0    |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[6]_76                    |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[25]_57                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[23]_59                   |                                                 |                                |                5 |              8 |
+|  netW/N4/N1/MEM0/Prob[15]_67                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[14]_68                   |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[13]_69                   |                                                 |                                |                3 |              8 |
+|  programmeur/index_temp_reg[7]_i_2_n_0         |                                                 |                                |                2 |              8 |
+|  programmeur/out[1]                            |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[20]_134                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[11]_143                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[13]_141                  |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[14]_140                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[15]_139                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[16]_138                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[17]_137                  |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[18]_136                  |                                                 |                                |                4 |              8 |
+|  netW/N6/N1/MEM0/Prob[19]_135                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[1]_153                   |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[10]_144                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[21]_133                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[22]_132                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[23]_131                  |                                                 |                                |                6 |              8 |
+|  netW/N6/N1/MEM0/Prob[24]_130                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[25]_129                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[26]_128                  |                                                 |                                |                2 |              8 |
+|  netW/N6/N1/MEM0/Prob[27]_127                  |                                                 |                                |                3 |              8 |
+|  netW/N6/N1/MEM0/Prob[28]_126                  |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[31]_15                   |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[22]_24                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[23]_23                   |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[24]_22                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[26]_20                   |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[27]_19                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[28]_18                   |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[29]_17                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[2]_44                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[30]_16                   |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[21]_25                   |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[3]_43                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[4]_42                    |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[5]_41                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[6]_40                    |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[7]_39                    |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[8]_38                    |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[9]_37                    |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[25]_21                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/data_out_reg[9]_i_2__2_n_0    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[13]_33                   |                                                 |                                |                4 |              8 |
+|  netW/N1/N1/MEM0/data_out_reg[9]_i_2_n_0       |                                                 |                                |                2 |              8 |
+|  netW/N1/N1/MEM0/Prob[0]_8                     |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[5]_77                    |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[4]_78                    |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[3]_79                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[0]__0                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[12]_34                   |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/Prob[10]_36                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[11]_35                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[2]_116                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[14]_32                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[15]_31                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[16]_30                   |                                                 |                                |                2 |              8 |
+|  netW/N3/N1/MEM0/Prob[17]_29                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[18]_28                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[19]_27                   |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[1]_45                    |                                                 |                                |                3 |              8 |
+|  netW/N3/N1/MEM0/Prob[20]_26                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[20]_98                   |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[11]_107                  |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[13]_105                  |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[14]_104                  |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[15]_103                  |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[16]_102                  |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[17]_101                  |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[18]_100                  |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[19]_99                   |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[1]_117                   |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[30]_52                   |                                                 |                                |                5 |              8 |
+|  netW/N5/N1/MEM0/Prob[21]_97                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[22]_96                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[23]_95                   |                                                 |                                |                6 |              8 |
+|  netW/N5/N1/MEM0/Prob[24]_94                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[25]_93                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[26]_92                   |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[27]_91                   |                                                 |                                |                4 |              8 |
+|  netW/N5/N1/MEM0/Prob[28]_90                   |                                                 |                                |                2 |              8 |
+|  netW/N5/N1/MEM0/Prob[30]_88                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[29]_53                   |                                                 |                                |                5 |              8 |
+|  netW/N4/N1/MEM0/Prob[2]_80                    |                                                 |                                |                3 |              8 |
+|  netW/N2/N1/MEM0/data_out_reg[9]_i_2__0_n_0    |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[31]_51                   |                                                 |                                |                4 |              8 |
+|  netW/N5/N1/MEM0/Prob[10]_108                  |                                                 |                                |                3 |              8 |
+|  netW/N2/N1/MEM0/Prob[0]_9                     |                                                 |                                |                4 |              8 |
+|  netW/N3/N1/MEM0/data_out_reg[9]_i_2__1_n_0    |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[28]_54                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[22]_60                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[21]_61                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[20]_62                   |                                                 |                                |                2 |              8 |
+|  netW/N4/N1/MEM0/Prob[1]_81                    |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[19]_63                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[18]_64                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[17]_65                   |                                                 |                                |                4 |              8 |
+|  netW/N4/N1/MEM0/Prob[16]_66                   |                                                 |                                |                3 |              8 |
+|  netW/N4/N1/MEM0/Prob[0]__0                    |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[0]__0                    |                                                 |                                |                3 |              8 |
+|  netW/N5/N1/MEM0/Prob[12]_106                  |                                                 |                                |                3 |              8 |
+|  clk_IBUF_BUFG                                 | vip_moy1/D1/ReadTempo                           |                                |                8 |             10 |
+|  clk_IBUF_BUFG                                 | vip_moy2/D1/ReadTempo                           |                                |                5 |             10 |
+|  clk_IBUF_BUFG                                 | vip_moy2/start_reg_n_0                          |                                |                5 |             17 |
+|  clk_IBUF_BUFG                                 | vip_moy1/start_reg_n_0                          |                                |                5 |             17 |
+|  clk_IBUF_BUFG                                 | netW/N5/N1/prob_out                             | netW/N6/N1/MEM0/index_reg[4]_0 |                8 |             29 |
+|  clk_IBUF_BUFG                                 | netW/N6/N1/accu_one_reg[28]_4                   | netW/N6/N1/MEM0/index_reg[4]_0 |                8 |             29 |
+|  sig_Wen_BUFG                                  |                                                 |                                |               15 |             45 |
+|  clk_IBUF_BUFG                                 | vip_moy2/D1/p_0_out                             |                                |               18 |             48 |
+|  clk_IBUF_BUFG                                 | vip_moy1/D1/p_0_out                             |                                |               13 |             48 |
+|  netWn_0_844_BUFG                              |                                                 |                                |               24 |             53 |
+| ~clk_IBUF_BUFG                                 |                                                 |                                |               44 |             60 |
+|  clk_IBUF_BUFG                                 |                                                 |                                |               47 |             64 |
+|  clk_IBUF_BUFG                                 |                                                 | netW/N6/N1/MEM0/index_reg[4]_0 |               61 |            163 |
++------------------------------------------------+-------------------------------------------------+--------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    26 |
+| 3      |                     6 |
+| 4      |                    60 |
+| 5      |                    10 |
+| 6      |                     3 |
+| 8      |                   138 |
+| 10     |                     2 |
+| 16+    |                    11 |
++--------+-----------------------+
+
+

@@ -1,0 +1,15 @@
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /softslin/vivado_17.1/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab -wto 00340cae70bd4c03980240d7b7359211 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Bench_test_FPBN_behav xil_defaultlib.Bench_test_FPBN -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-122] fpbn_top remains a black-box since it has no binding entity [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:111]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.bench_test_fpbn
+Built simulation snapshot Bench_test_FPBN_behav

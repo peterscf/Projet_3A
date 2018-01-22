@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1516643414">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="FPBN_top.drc"/>
+  <File Type="BG-BGN" Name="FPBN_top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="FPBN_top.sysdef"/>
+  <File Type="BITSTR-MMI" Name="FPBN_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="FPBN_top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="FPBN_top.nky"/>
+  <File Type="BITSTR-RBT" Name="FPBN_top.rbt"/>
+  <File Type="BITSTR-MSK" Name="FPBN_top.msk"/>
+  <File Type="BG-BIN" Name="FPBN_top.bin"/>
+  <File Type="BG-BIT" Name="FPBN_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="FPBN_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="FPBN_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="FPBN_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="FPBN_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="FPBN_top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="FPBN_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="FPBN_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="FPBN_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="FPBN_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="FPBN_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="FPBN_top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="FPBN_top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="FPBN_top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="FPBN_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="FPBN_top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="FPBN_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="FPBN_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="FPBN_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="FPBN_top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="FPBN_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="FPBN_top_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="FPBN_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="FPBN_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="FPBN_top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="FPBN_top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="FPBN_top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="FPBN_top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="FPBN_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="RDI-RDI" Name="FPBN_top.vdi"/>
+  <File Type="PLACE-TIMING" Name="FPBN_top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="FPBN_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="FPBN_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="FPBN_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="FPBN_top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="FPBN_top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="FPBN_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="FPBN_top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="FPBN_top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="FPBN_top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="FPBN_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="FPBN_top_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="FPBN_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="FPBN_top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="FPBN_top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="FPBN_top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="FPBN_top_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="FPBN_top_timing_summary_init.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="FPBN_top_postplace_pwropt.dcp"/>
+  <File Type="PA-TCL" Name="FPBN_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/INV_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/INV_behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513586846"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX_Behavorial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/MUX_Behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513589193"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/Memory.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/vhd/Memory.vhd"/>
+        <Attr Name="ImportTime" Val="1515404935"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Node.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/Node.vhd"/>
+        <Attr Name="ImportTime" Val="1515662298"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/Prog.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/vhd/Prog.vhd"/>
+        <Attr Name="ImportTime" Val="1515679918"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TRNG_10bit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/TRNG_10bit.vhd"/>
+        <Attr Name="ImportTime" Val="1515661749"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/bench/VIP_moy.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/bench/VIP_moy.vhd"/>
+        <Attr Name="ImportTime" Val="1515397672"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/XOR_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/XOR_behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513850308"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_generator_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/clock_generator_behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513593446"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/core.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/vhd/core.vhd"/>
+        <Attr Name="ImportTime" Val="1515397672"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/gateway.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/vhd/gateway.vhd"/>
+        <Attr Name="ImportTime" Val="1515407850"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/network.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../RTL/vhd/network.vhd"/>
+        <Attr Name="ImportTime" Val="1515397672"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/register_behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513591783"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/ring_loop.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA/vhd/ring_loop.vhd"/>
+        <Attr Name="ImportTime" Val="1512990976"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FPBN_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/FPBN_top.vhd"/>
+        <Attr Name="ImportTime" Val="1516033680"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/diviseur.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/diviseur.vhd"/>
+        <Attr Name="ImportTime" Val="1515678443"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ring_top.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/ring_top.vhd"/>
+        <Attr Name="ImportTime" Val="1513690376"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Correcteur_XOR_behavorial.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/sources_1/new/Correcteur_XOR_behavorial.vhd"/>
+        <Attr Name="ImportTime" Val="1513693301"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/vhd/MUX_analogique.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA/vhd/MUX_analogique.vhd"/>
+        <Attr Name="ImportTime" Val="1512988794"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/project_1/test_cna.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_1/test_cna.vhd"/>
+        <Attr Name="ImportTime" Val="1513247858"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="FPBN_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/contrainte_combinatorial_loop.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc"/>
+        <Attr Name="ImportTime" Val="1516261587"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/contrainte_combinatorial_loop.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="div_gen_0"/>
+</GenRun>

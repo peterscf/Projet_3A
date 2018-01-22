@@ -1,0 +1,1 @@
+-wto "00340cae70bd4c03980240d7b7359211" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Bench_test_FPBN_behav" "xil_defaultlib.Bench_test_FPBN" -log "elaborate.log" 

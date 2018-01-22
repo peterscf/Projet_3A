@@ -1,0 +1,459 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Thu Jan 18 12:04:54 2018
+| Host         : cimeld15 running 64-bit Debian GNU/Linux 7.8 (wheezy)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file FPBN_top_timing_summary_routed.rpt -rpx FPBN_top_timing_summary_routed.rpx
+| Design       : FPBN_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 513 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N1/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N1/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: netW/N2/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N2/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/index_reg[0]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/index_reg[1]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N3/N1/G0/index_reg[2]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N3/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N3/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/index_reg[0]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/index_reg[1]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N4/N1/G0/index_reg[2]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N4/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N4/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/index_reg[0]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/index_reg[1]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N5/N1/G0/index_reg[2]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N5/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N5/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/index_reg[0]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/index_reg[1]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: netW/N6/N1/G0/index_reg[2]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/FSM_sequential_current_state_reg[0]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/FSM_sequential_current_state_reg[1]/Q (HIGH)
+
+ There are 269 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/FSM_sequential_current_state_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/index_reg[0]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/index_reg[1]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/index_reg[2]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/index_reg[3]/Q (HIGH)
+
+ There are 256 register/latch pins with no clock driven by root clock pin: netW/N6/N1/MEM0/index_reg[4]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r0/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r1/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r2/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r3/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r4/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r5/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r6/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r7/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r8/g1/clk_delay_reg/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: netW/N6/R1/r9/g1/clk_delay_reg/Q (HIGH)
+
+ There are 136 register/latch pins with no clock driven by root clock pin: programmeur/FSM_onehot_current_state_reg[1]/Q (HIGH)
+
+ There are 144 register/latch pins with no clock driven by root clock pin: programmeur/FSM_onehot_current_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: programmeur/FSM_onehot_current_state_reg[3]/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: programmeur/FSM_onehot_current_state_reg[4]/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: programmeur/FSM_onehot_current_state_reg[5]/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 2742 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 22 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 360 combinational loops in the design. (HIGH)
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+         NA           NA                     NA                   NA           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+

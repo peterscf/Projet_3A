@@ -1,0 +1,7 @@
+Running: xsim.dir/Bench_test_FPBN_behav/xsimk -simmode gui -wdb Bench_test_FPBN_behav.wdb -simrunnum 0 -socket 40032
+Design successfully loaded
+Design Loading Memory Usage: 40756 KB (Peak: 40756 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 56960 KB (Peak: 56960 KB)
+Simulation CPU Usage: 20 ms

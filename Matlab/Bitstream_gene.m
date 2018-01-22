@@ -361,11 +361,9 @@ for n=1:1:nb_noeud
 end
 
 gateway_hex = num2str(gateway_hex);
-
 gateway_hex=bin2dec(gateway_hex);
 
 gateway_hex=dec2hex(gateway_hex);
-
 gateway_hex_inv =gateway_hex;
 
 for m=1:1:5*nb_noeud

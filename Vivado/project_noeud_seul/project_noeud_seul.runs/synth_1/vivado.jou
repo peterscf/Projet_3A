@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Jan 18 11:39:51 2018
+# Process ID: 20931
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_noeud_seul/project_noeud_seul.runs/synth_1
+# Command line: vivado -log ring_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ring_top.tcl
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_noeud_seul/project_noeud_seul.runs/synth_1/ring_top.vds
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_noeud_seul/project_noeud_seul.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ring_top.tcl -notrace

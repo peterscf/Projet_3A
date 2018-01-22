@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jan 15 10:44:31 2018
+# Process ID: 4977
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+ipx::create_abstraction_definition cime3 user Projet_3A_rtl 1.0
+ipx::create_bus_definition cime3 user Projet_3A 1.0
+set_property xml_file_name /tp/xph3app/xph3app604/Projet_3A/ip_repo/Projet_3A_rtl.xml [ipx::current_busabs]
+set_property xml_file_name /tp/xph3app/xph3app604/Projet_3A/ip_repo/Projet_3A.xml [ipx::current_busdef]
+set_property bus_type_vlnv cime3:user:Projet_3A:1.0 [ipx::current_busabs]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+set_property  ip_repo_paths  /tp/xph3app/xph3app604/Projet_3A/ip_repo [current_project]
+update_ip_catalog
+ipx::add_bus_abstraction_port noeud_1_proba [ipx::current_busabs]
+set_property default_value 0 [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_presence required [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_direction in [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_width 10 [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property slave_presence required [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property slave_width 10 [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property is_data true [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property default_value out [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property slave_direction {} [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property slave_direction {} [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_direction required [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_direction illegal [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property master_direction required [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+set_property slave_presence {} [ipx::get_bus_abstraction_ports noeud_1_proba -of_objects [ipx::current_busabs]]
+ipx::open_ipxact_file /tp/xph3app/xph3app604/Projet_3A/ip_repo/Projet_3A_rtl.xml
+ipx::unload_abstraction_definition /tp/xph3app/xph3app604/Projet_3A/ip_repo/Projet_3A_rtl.xml
+ipx::unload_bus_definition /tp/xph3app/xph3app604/Projet_3A/ip_repo/Projet_3A.xml
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1

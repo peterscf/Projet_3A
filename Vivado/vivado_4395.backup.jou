@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Jan 18 08:17:36 2018
+# Process ID: 4395
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+launch_simulation -mode post-synthesis -type functional
+set_property SOURCE_SET {} [get_filesets sim_1]
+close [ open /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd w ]
+add_files -fileset sim_1 /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/bench_test_ring_loop.vhd]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source Bench_test_FPBN.tcl
+open_run impl_1
+set_property is_enabled false [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/FPBN_top.vhd]
+update_compile_order -fileset sources_1
+set_property is_enabled true [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/FPBN_top.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_project_as project_noeud_seul /tp/xph3app/xph3app604/Projet_3A/Vivado/project_noeud_seul -force
+close_sim

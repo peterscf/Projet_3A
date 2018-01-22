@@ -1,0 +1,574 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date             : Mon Jan 22 18:52:29 2018
+| Host             : ocaepc07 running 64-bit Debian GNU/Linux 7.11 (wheezy)
+| Command          : report_power -file FPBN_top_power_routed.rpt -pb FPBN_top_power_summary_routed.pb -rpx FPBN_top_power_routed.rpx
+| Design           : FPBN_top
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 76.878 (Junction temp exceeded!) |
+| Dynamic (W)              | 75.834                           |
+| Device Static (W)        | 1.044                            |
+| Effective TJA (C/W)      | 14.4                             |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |    21.114 |     8330 |       --- |             --- |
+|   LUT as Logic          |    17.868 |     2198 |     53200 |            4.13 |
+|   Register              |     2.204 |     4449 |    106400 |            4.18 |
+|   LUT as Shift Register |     0.673 |      138 |     17400 |            0.79 |
+|   CARRY4                |     0.352 |      146 |     13300 |            1.10 |
+|   BUFG                  |     0.016 |        3 |        32 |            9.38 |
+|   F7/F8 Muxes           |     0.001 |      196 |     53200 |            0.37 |
+|   Others                |     0.000 |      482 |       --- |             --- |
+| Signals                 |    25.083 |     6753 |       --- |             --- |
+| Block RAM               |     0.268 |        1 |       140 |            0.71 |
+| DSPs                    |    15.183 |       24 |       220 |           10.91 |
+| I/O                     |    14.186 |       26 |       200 |           13.00 |
+| Static Power            |     1.044 |          |           |                 |
+| Total                   |    76.878 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    61.938 |      61.638 |      0.300 |
+| Vccaux    |       1.800 |     0.620 |       0.520 |      0.100 |
+| Vcco33    |       3.300 |     4.014 |       4.013 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.046 |       0.018 |      0.028 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 14.4                   |
+| Airflow (LFM)         | 0                      |
+| Heat Sink             | low (Low Profile)      |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------------------------------------------+-----------+
+| Name                                                                              | Power (W) |
++-----------------------------------------------------------------------------------+-----------+
+| FPBN_top                                                                          |    75.834 |
+|   netW                                                                            |    17.935 |
+|     N1                                                                            |     2.906 |
+|       N1                                                                          |     0.195 |
+|         G0                                                                        |     0.011 |
+|         MEM0                                                                      |     0.090 |
+|       R1                                                                          |     2.293 |
+|         r0                                                                        |     0.224 |
+|           g1                                                                      |     0.224 |
+|         r1                                                                        |     0.231 |
+|           g1                                                                      |     0.231 |
+|         r2                                                                        |     0.247 |
+|           g1                                                                      |     0.247 |
+|         r3                                                                        |     0.220 |
+|           g1                                                                      |     0.220 |
+|         r4                                                                        |     0.236 |
+|           g1                                                                      |     0.236 |
+|         r5                                                                        |     0.243 |
+|           g1                                                                      |     0.243 |
+|         r6                                                                        |     0.235 |
+|           g1                                                                      |     0.235 |
+|         r7                                                                        |     0.233 |
+|           g1                                                                      |     0.233 |
+|         r8                                                                        |     0.216 |
+|           g1                                                                      |     0.216 |
+|         r9                                                                        |     0.207 |
+|           g1                                                                      |     0.207 |
+|     N2                                                                            |     2.846 |
+|       N1                                                                          |     0.165 |
+|         G0                                                                        |     0.040 |
+|         MEM0                                                                      |     0.042 |
+|       R1                                                                          |     2.274 |
+|         r0                                                                        |     0.216 |
+|           g1                                                                      |     0.216 |
+|         r1                                                                        |     0.252 |
+|           g1                                                                      |     0.252 |
+|         r2                                                                        |     0.216 |
+|           g1                                                                      |     0.216 |
+|         r3                                                                        |     0.242 |
+|           g1                                                                      |     0.242 |
+|         r4                                                                        |     0.240 |
+|           g1                                                                      |     0.240 |
+|         r5                                                                        |     0.247 |
+|           g1                                                                      |     0.247 |
+|         r6                                                                        |     0.220 |
+|           g1                                                                      |     0.220 |
+|         r7                                                                        |     0.220 |
+|           g1                                                                      |     0.220 |
+|         r8                                                                        |     0.211 |
+|           g1                                                                      |     0.211 |
+|         r9                                                                        |     0.210 |
+|           g1                                                                      |     0.210 |
+|     N3                                                                            |     3.202 |
+|       N1                                                                          |     0.383 |
+|         G0                                                                        |     0.127 |
+|         MEM0                                                                      |     0.179 |
+|       R1                                                                          |     2.391 |
+|         r0                                                                        |     0.225 |
+|           g1                                                                      |     0.225 |
+|         r1                                                                        |     0.255 |
+|           g1                                                                      |     0.255 |
+|         r2                                                                        |     0.230 |
+|           g1                                                                      |     0.230 |
+|         r3                                                                        |     0.222 |
+|           g1                                                                      |     0.222 |
+|         r4                                                                        |     0.235 |
+|           g1                                                                      |     0.235 |
+|         r5                                                                        |     0.248 |
+|           g1                                                                      |     0.248 |
+|         r6                                                                        |     0.250 |
+|           g1                                                                      |     0.250 |
+|         r7                                                                        |     0.242 |
+|           g1                                                                      |     0.242 |
+|         r8                                                                        |     0.236 |
+|           g1                                                                      |     0.236 |
+|         r9                                                                        |     0.249 |
+|           g1                                                                      |     0.249 |
+|     N4                                                                            |     3.129 |
+|       N1                                                                          |     0.359 |
+|         G0                                                                        |     0.125 |
+|         MEM0                                                                      |     0.160 |
+|       R1                                                                          |     2.348 |
+|         r0                                                                        |     0.229 |
+|           g1                                                                      |     0.229 |
+|         r1                                                                        |     0.214 |
+|           g1                                                                      |     0.214 |
+|         r2                                                                        |     0.256 |
+|           g1                                                                      |     0.256 |
+|         r3                                                                        |     0.237 |
+|           g1                                                                      |     0.237 |
+|         r4                                                                        |     0.221 |
+|           g1                                                                      |     0.221 |
+|         r5                                                                        |     0.250 |
+|           g1                                                                      |     0.250 |
+|         r6                                                                        |     0.226 |
+|           g1                                                                      |     0.226 |
+|         r7                                                                        |     0.228 |
+|           g1                                                                      |     0.228 |
+|         r8                                                                        |     0.243 |
+|           g1                                                                      |     0.243 |
+|         r9                                                                        |     0.244 |
+|           g1                                                                      |     0.244 |
+|     N5                                                                            |     2.996 |
+|       N1                                                                          |     0.198 |
+|         G0                                                                        |     0.028 |
+|         MEM0                                                                      |     0.097 |
+|       R1                                                                          |     2.391 |
+|         r0                                                                        |     0.249 |
+|           g1                                                                      |     0.249 |
+|         r1                                                                        |     0.230 |
+|           g1                                                                      |     0.230 |
+|         r2                                                                        |     0.234 |
+|           g1                                                                      |     0.234 |
+|         r3                                                                        |     0.214 |
+|           g1                                                                      |     0.214 |
+|         r4                                                                        |     0.252 |
+|           g1                                                                      |     0.252 |
+|         r5                                                                        |     0.248 |
+|           g1                                                                      |     0.248 |
+|         r6                                                                        |     0.239 |
+|           g1                                                                      |     0.239 |
+|         r7                                                                        |     0.248 |
+|           g1                                                                      |     0.248 |
+|         r8                                                                        |     0.226 |
+|           g1                                                                      |     0.226 |
+|         r9                                                                        |     0.251 |
+|           g1                                                                      |     0.251 |
+|     N6                                                                            |     2.855 |
+|       N1                                                                          |     0.101 |
+|         G0                                                                        |     0.017 |
+|         MEM0                                                                      |     0.016 |
+|       R1                                                                          |     2.340 |
+|         r0                                                                        |     0.235 |
+|           g1                                                                      |     0.235 |
+|         r1                                                                        |     0.231 |
+|           g1                                                                      |     0.231 |
+|         r2                                                                        |     0.231 |
+|           g1                                                                      |     0.231 |
+|         r3                                                                        |     0.240 |
+|           g1                                                                      |     0.240 |
+|         r4                                                                        |     0.225 |
+|           g1                                                                      |     0.225 |
+|         r5                                                                        |     0.247 |
+|           g1                                                                      |     0.247 |
+|         r6                                                                        |     0.228 |
+|           g1                                                                      |     0.228 |
+|         r7                                                                        |     0.239 |
+|           g1                                                                      |     0.239 |
+|         r8                                                                        |     0.226 |
+|           g1                                                                      |     0.226 |
+|         r9                                                                        |     0.238 |
+|           g1                                                                      |     0.238 |
+|   programmeur                                                                     |     0.528 |
+|   vip_moy1                                                                        |    21.754 |
+|     D1                                                                            |    20.498 |
+|       U0                                                                          |    20.498 |
+|         i_synth                                                                   |    20.498 |
+|           i_has_aresetn.i_reg_reset                                               |     0.000 |
+|           i_nd_to_rdy                                                             |     0.007 |
+|           i_nonzero_fract.i_synth                                                 |    20.491 |
+|             opt_high_radix.i_nonzero_fract.i_high_radix                           |    20.491 |
+|               i_denom_est_bypass                                                  |     0.467 |
+|               i_est_prescale_balance                                              |     0.200 |
+|               i_estimator                                                         |     2.125 |
+|                 i_coarse_est                                                      |     0.194 |
+|                 i_lut                                                             |     0.371 |
+|                   i_synth_opt.i_synth                                             |     0.371 |
+|                 i_multadd                                                         |     1.424 |
+|                   i_synth_option.i_synth_model                                    |     1.424 |
+|                     opt_vx7.i_uniwrap                                             |     1.424 |
+|                 i_x_bypass                                                        |     0.137 |
+|               i_fix_prenorm.i_prenormalizer                                       |     2.219 |
+|                 i_layer[2].i_shift_ctrl                                           |     0.025 |
+|                 i_layer[2].i_shift_data                                           |     0.372 |
+|                 i_layer[4].i_shift_ctrl                                           |    <0.001 |
+|                 i_layer[4].i_shift_data                                           |     0.422 |
+|                 i_layer[6].i_shift_ctrl                                           |    <0.001 |
+|                 i_layer[6].i_shift_data                                           |     0.402 |
+|               i_fix_prenorm.i_shift_del                                           |     0.065 |
+|               i_fixed.i_fix_to_flt                                                |     1.641 |
+|                 i_fpo                                                             |     1.638 |
+|                   FIX_TO_FLT_OP.SPD.OP                                            |     1.638 |
+|                     EXP                                                           |     0.034 |
+|                       EXP_MOD_DEL                                                 |     0.028 |
+|                         i_pipe                                                    |     0.028 |
+|                       IP_SIGN_DELAY                                               |     0.002 |
+|                         i_pipe                                                    |     0.002 |
+|                       ZERO_DELAY                                                  |    <0.001 |
+|                         i_pipe                                                    |    <0.001 |
+|                     LZE                                                           |     0.196 |
+|                       ENCODE[0].DIST_DEL                                          |    <0.001 |
+|                         i_pipe                                                    |    <0.001 |
+|                       ENCODE[0].MUX_0                                             |     0.014 |
+|                         OP_DEL                                                    |     0.014 |
+|                           i_pipe                                                  |     0.014 |
+|                       ENCODE[0].MUX_Z                                             |     0.066 |
+|                         OP_DEL                                                    |     0.066 |
+|                           i_pipe                                                  |     0.066 |
+|                       ENCODE[1].DIST_DEL                                          |     0.004 |
+|                         i_pipe                                                    |     0.004 |
+|                       ENCODE[1].MUX_0                                             |     0.024 |
+|                         OP_DEL                                                    |     0.024 |
+|                           i_pipe                                                  |     0.024 |
+|                       ZERO_DET_CC_1                                               |     0.017 |
+|                       ZERO_DET_CC_2.CC                                            |     0.012 |
+|                     M_ABS                                                         |     0.135 |
+|                       Q_DEL                                                       |     0.117 |
+|                         i_pipe                                                    |     0.117 |
+|                     NORM_SHIFT                                                    |     0.427 |
+|                       MUX_LOOP[0].DEL_SHIFT                                       |     0.326 |
+|                         i_pipe                                                    |     0.326 |
+|                       MUX_LOOP[1].DEL_SHIFT                                       |     0.101 |
+|                         i_pipe                                                    |     0.101 |
+|                     OP                                                            |     0.231 |
+|                     ROUND                                                         |     0.312 |
+|                       LOGIC.RND1                                                  |     0.075 |
+|                         Q_DEL                                                     |     0.063 |
+|                           i_pipe                                                  |     0.063 |
+|                       LOGIC.RND2                                                  |     0.087 |
+|                         Q_DEL                                                     |     0.075 |
+|                           i_pipe                                                  |     0.075 |
+|                       RND_BIT_GEN                                                 |    <0.001 |
+|                         NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1                       |    <0.001 |
+|                     Z_C_DEL                                                       |     0.238 |
+|                       i_pipe                                                      |     0.238 |
+|               i_fixed.i_negate_del                                                |     0.014 |
+|               i_flow_ctrl                                                         |     0.015 |
+|               i_iterative_unit                                                    |     9.407 |
+|                 i_est_reg                                                         |     0.607 |
+|                 i_extra_digits.i_add                                              |     0.040 |
+|                   i_synth_option.i_synth_model                                    |     0.040 |
+|                     opt_vx7.i_uniwrap                                             |     0.040 |
+|                 i_extra_digits.i_est_carousel                                     |     0.216 |
+|                 i_extra_digits.i_est_reg                                          |     0.168 |
+|                 i_extra_digits.i_extra_digit_carrysave_carousel                   |     0.020 |
+|                 i_extra_digits.i_extra_digit_subtract_del                         |     0.008 |
+|                 i_extra_digits.i_multadd                                          |     0.137 |
+|                   i_synth_option.i_synth_model                                    |     0.137 |
+|                     opt_vx7.i_uniwrap                                             |     0.137 |
+|                 i_nd_del                                                          |     0.012 |
+|                 i_nd_pipe                                                         |     0.009 |
+|                 i_nd_pipe2                                                        |     0.004 |
+|                 i_splice[1].i_add                                                 |     0.285 |
+|                   i_synth_option.i_synth_model                                    |     0.285 |
+|                     opt_vx7.i_uniwrap                                             |     0.285 |
+|                 i_splice[1].i_carrysave_del                                       |     0.132 |
+|                 i_splice[1].i_denom_pipe                                          |     0.104 |
+|                 i_splice[1].i_denom_reg                                           |     0.044 |
+|                 i_splice[1].i_denommux_reg                                        |     0.040 |
+|                 i_splice[1].i_mult                                                |     1.147 |
+|                   i_synth_option.i_synth_model                                    |     1.147 |
+|                     opt_vx7.i_uniwrap                                             |     1.147 |
+|                 i_splice[1].i_residue_reg                                         |     0.035 |
+|                 i_splice[2].i_add                                                 |     0.447 |
+|                   i_synth_option.i_synth_model                                    |     0.447 |
+|                     opt_vx7.i_uniwrap                                             |     0.447 |
+|                 i_splice[2].i_carrysave_del                                       |     0.142 |
+|                 i_splice[2].i_denom_pipe                                          |     0.179 |
+|                 i_splice[2].i_denom_reg                                           |     0.146 |
+|                 i_splice[2].i_denommux_reg                                        |     0.082 |
+|                 i_splice[2].i_mult                                                |     1.114 |
+|                   i_synth_option.i_synth_model                                    |     1.114 |
+|                     opt_vx7.i_uniwrap                                             |     1.114 |
+|                 i_splice[2].i_residue_reg                                         |     0.152 |
+|                 i_splice[3].i_add                                                 |     0.461 |
+|                   i_synth_option.i_synth_model                                    |     0.461 |
+|                     opt_vx7.i_uniwrap                                             |     0.461 |
+|                 i_splice[3].i_carrysave_del                                       |     0.131 |
+|                 i_splice[3].i_denom_pipe                                          |     0.187 |
+|                 i_splice[3].i_denom_reg                                           |     0.146 |
+|                 i_splice[3].i_denommux_reg                                        |     0.146 |
+|                 i_splice[3].i_mult                                                |     1.399 |
+|                   i_synth_option.i_synth_model                                    |     1.399 |
+|                     opt_vx7.i_uniwrap                                             |     1.399 |
+|                 i_splice[3].i_residue_reg                                         |     0.227 |
+|                 i_subtract_reg                                                    |     0.005 |
+|               i_numer_del                                                         |     0.747 |
+|               i_prescaler                                                         |     1.925 |
+|                 gDSP.gDSP_only.iDSP                                               |     1.925 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.087 |
+|               i_quotient_collector                                                |     1.621 |
+|                 i_typical_case.i_addsub                                           |     1.279 |
+|                   i_vx5_sp3.i_casc_dsp48.i_lower_addsub                           |     1.010 |
+|                     i_synth_option.i_synth_model                                  |     1.010 |
+|                       opt_vx7.i_uniwrap                                           |     1.010 |
+|                   i_vx5_sp3.i_casc_dsp48.i_lower_p_balance                        |     0.269 |
+|                 i_typical_case.i_negate_carousel                                  |     0.011 |
+|                 i_typical_case.i_quot_carousel_balance                            |     0.330 |
+|   vip_moy2                                                                        |    21.282 |
+|     D1                                                                            |    20.044 |
+|       U0                                                                          |    20.044 |
+|         i_synth                                                                   |    20.044 |
+|           i_has_aresetn.i_reg_reset                                               |     0.000 |
+|           i_nd_to_rdy                                                             |     0.007 |
+|           i_nonzero_fract.i_synth                                                 |    20.037 |
+|             opt_high_radix.i_nonzero_fract.i_high_radix                           |    20.037 |
+|               i_denom_est_bypass                                                  |     0.493 |
+|               i_est_prescale_balance                                              |     0.174 |
+|               i_estimator                                                         |     2.056 |
+|                 i_coarse_est                                                      |     0.214 |
+|                 i_lut                                                             |     0.364 |
+|                   i_synth_opt.i_synth                                             |     0.364 |
+|                 i_multadd                                                         |     1.324 |
+|                   i_synth_option.i_synth_model                                    |     1.324 |
+|                     opt_vx7.i_uniwrap                                             |     1.324 |
+|                 i_x_bypass                                                        |     0.153 |
+|               i_fix_prenorm.i_prenormalizer                                       |     2.397 |
+|                 i_layer[2].i_shift_ctrl                                           |     0.024 |
+|                 i_layer[2].i_shift_data                                           |     0.361 |
+|                 i_layer[4].i_shift_ctrl                                           |    <0.001 |
+|                 i_layer[4].i_shift_data                                           |     0.450 |
+|                 i_layer[6].i_shift_ctrl                                           |    <0.001 |
+|                 i_layer[6].i_shift_data                                           |     0.601 |
+|               i_fix_prenorm.i_shift_del                                           |     0.079 |
+|               i_fixed.i_fix_to_flt                                                |     1.505 |
+|                 i_fpo                                                             |     1.501 |
+|                   FIX_TO_FLT_OP.SPD.OP                                            |     1.501 |
+|                     EXP                                                           |     0.032 |
+|                       EXP_MOD_DEL                                                 |     0.028 |
+|                         i_pipe                                                    |     0.028 |
+|                       IP_SIGN_DELAY                                               |     0.002 |
+|                         i_pipe                                                    |     0.002 |
+|                       ZERO_DELAY                                                  |    <0.001 |
+|                         i_pipe                                                    |    <0.001 |
+|                     LZE                                                           |     0.181 |
+|                       ENCODE[0].DIST_DEL                                          |    <0.001 |
+|                         i_pipe                                                    |    <0.001 |
+|                       ENCODE[0].MUX_0                                             |     0.014 |
+|                         OP_DEL                                                    |     0.014 |
+|                           i_pipe                                                  |     0.014 |
+|                       ENCODE[0].MUX_Z                                             |     0.063 |
+|                         OP_DEL                                                    |     0.063 |
+|                           i_pipe                                                  |     0.063 |
+|                       ENCODE[1].DIST_DEL                                          |     0.003 |
+|                         i_pipe                                                    |     0.003 |
+|                       ENCODE[1].MUX_0                                             |     0.019 |
+|                         OP_DEL                                                    |     0.019 |
+|                           i_pipe                                                  |     0.019 |
+|                       ZERO_DET_CC_1                                               |     0.018 |
+|                       ZERO_DET_CC_2.CC                                            |     0.011 |
+|                     M_ABS                                                         |     0.144 |
+|                       Q_DEL                                                       |     0.127 |
+|                         i_pipe                                                    |     0.127 |
+|                     NORM_SHIFT                                                    |     0.399 |
+|                       MUX_LOOP[0].DEL_SHIFT                                       |     0.304 |
+|                         i_pipe                                                    |     0.304 |
+|                       MUX_LOOP[1].DEL_SHIFT                                       |     0.095 |
+|                         i_pipe                                                    |     0.095 |
+|                     OP                                                            |     0.184 |
+|                     ROUND                                                         |     0.291 |
+|                       LOGIC.RND1                                                  |     0.066 |
+|                         Q_DEL                                                     |     0.053 |
+|                           i_pipe                                                  |     0.053 |
+|                       LOGIC.RND2                                                  |     0.080 |
+|                         Q_DEL                                                     |     0.068 |
+|                           i_pipe                                                  |     0.068 |
+|                       RND_BIT_GEN                                                 |    <0.001 |
+|                         NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1                       |    <0.001 |
+|                     Z_C_DEL                                                       |     0.209 |
+|                       i_pipe                                                      |     0.209 |
+|               i_fixed.i_negate_del                                                |     0.012 |
+|               i_flow_ctrl                                                         |     0.017 |
+|               i_iterative_unit                                                    |     9.104 |
+|                 i_est_reg                                                         |     0.510 |
+|                 i_extra_digits.i_add                                              |     0.040 |
+|                   i_synth_option.i_synth_model                                    |     0.040 |
+|                     opt_vx7.i_uniwrap                                             |     0.040 |
+|                 i_extra_digits.i_est_carousel                                     |     0.216 |
+|                 i_extra_digits.i_est_reg                                          |     0.176 |
+|                 i_extra_digits.i_extra_digit_carrysave_carousel                   |     0.019 |
+|                 i_extra_digits.i_extra_digit_subtract_del                         |     0.007 |
+|                 i_extra_digits.i_multadd                                          |     0.128 |
+|                   i_synth_option.i_synth_model                                    |     0.128 |
+|                     opt_vx7.i_uniwrap                                             |     0.128 |
+|                 i_nd_del                                                          |     0.012 |
+|                 i_nd_pipe                                                         |     0.007 |
+|                 i_nd_pipe2                                                        |     0.004 |
+|                 i_splice[1].i_add                                                 |     0.285 |
+|                   i_synth_option.i_synth_model                                    |     0.285 |
+|                     opt_vx7.i_uniwrap                                             |     0.285 |
+|                 i_splice[1].i_carrysave_del                                       |     0.139 |
+|                 i_splice[1].i_denom_pipe                                          |     0.096 |
+|                 i_splice[1].i_denom_reg                                           |     0.049 |
+|                 i_splice[1].i_denommux_reg                                        |     0.054 |
+|                 i_splice[1].i_mult                                                |     1.181 |
+|                   i_synth_option.i_synth_model                                    |     1.181 |
+|                     opt_vx7.i_uniwrap                                             |     1.181 |
+|                 i_splice[1].i_residue_reg                                         |     0.036 |
+|                 i_splice[2].i_add                                                 |     0.447 |
+|                   i_synth_option.i_synth_model                                    |     0.447 |
+|                     opt_vx7.i_uniwrap                                             |     0.447 |
+|                 i_splice[2].i_carrysave_del                                       |     0.127 |
+|                 i_splice[2].i_denom_pipe                                          |     0.194 |
+|                 i_splice[2].i_denom_reg                                           |     0.086 |
+|                 i_splice[2].i_denommux_reg                                        |     0.091 |
+|                 i_splice[2].i_mult                                                |     1.109 |
+|                   i_synth_option.i_synth_model                                    |     1.109 |
+|                     opt_vx7.i_uniwrap                                             |     1.109 |
+|                 i_splice[2].i_residue_reg                                         |     0.158 |
+|                 i_splice[3].i_add                                                 |     0.461 |
+|                   i_synth_option.i_synth_model                                    |     0.461 |
+|                     opt_vx7.i_uniwrap                                             |     0.461 |
+|                 i_splice[3].i_carrysave_del                                       |     0.134 |
+|                 i_splice[3].i_denom_pipe                                          |     0.195 |
+|                 i_splice[3].i_denom_reg                                           |     0.093 |
+|                 i_splice[3].i_denommux_reg                                        |     0.095 |
+|                 i_splice[3].i_mult                                                |     1.294 |
+|                   i_synth_option.i_synth_model                                    |     1.294 |
+|                     opt_vx7.i_uniwrap                                             |     1.294 |
+|                 i_splice[3].i_residue_reg                                         |     0.216 |
+|                 i_subtract_reg                                                    |     0.006 |
+|               i_numer_del                                                         |     0.718 |
+|               i_prescaler                                                         |     1.908 |
+|                 gDSP.gDSP_only.iDSP                                               |     1.908 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.075 |
+|               i_quotient_collector                                                |     1.534 |
+|                 i_typical_case.i_addsub                                           |     1.221 |
+|                   i_vx5_sp3.i_casc_dsp48.i_lower_addsub                           |     0.972 |
+|                     i_synth_option.i_synth_model                                  |     0.972 |
+|                       opt_vx7.i_uniwrap                                           |     0.972 |
+|                   i_vx5_sp3.i_casc_dsp48.i_lower_p_balance                        |     0.250 |
+|                 i_typical_case.i_negate_carousel                                  |     0.010 |
+|                 i_typical_case.i_quot_carousel_balance                            |     0.303 |
++-----------------------------------------------------------------------------------+-----------+
+
+

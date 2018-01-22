@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jan 15 12:08:19 2018
+# Process ID: 10772
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1

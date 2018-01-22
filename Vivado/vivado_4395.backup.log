@@ -1,0 +1,260 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Jan 18 08:17:36 2018
+# Process ID: 4395
+# Current directory: /tp/xph3app/xph3app604/Projet_3A/Vivado
+# Command line: vivado
+# Log file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.log
+# Journal file: /tp/xph3app/xph3app604/Projet_3A/Vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3app/xph3app604/Projet_3A/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 5994.043 ; gain = 107.574 ; free physical = 2033 ; free virtual = 13119
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+[Thu Jan 18 08:20:03 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+launch_runs impl_1
+[Thu Jan 18 08:21:28 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Thu Jan 18 08:24:35 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Thu Jan 18 08:28:19 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Thu Jan 18 08:46:33 2018] Launched synth_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/synth_1/runme.log
+launch_runs impl_1
+[Thu Jan 18 08:48:04 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Thu Jan 18 08:51:07 2018] Launched impl_1...
+Run output will be captured here: /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.runs/impl_1/runme.log
+launch_simulation -mode post-synthesis -type functional
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 211 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]
+Finished Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 6452.145 ; gain = 382.176 ; free physical = 1501 ; free virtual = 12714
+INFO: [Common 17-344] 'open_run' was cancelled
+INFO: [Vivado 12-5357] 'setup' step aborted
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 6452.145 ; gain = 382.176 ; free physical = 1487 ; free virtual = 12699
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property SOURCE_SET {} [get_filesets sim_1]
+close [ open /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd w ]
+add_files -fileset sim_1 /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/bench_test_ring_loop.vhd]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Bench_test_FPBN' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+xvhdl -m64 --relax -prj Bench_test_FPBN_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_test_FPBN
+ERROR: [VRFC 10-1412] syntax error near entity [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:39]
+ERROR: [VRFC 10-91] network is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:76]
+ERROR: [VRFC 10-91] clk is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:108]
+ERROR: [VRFC 10-91] reset_n is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:110]
+ERROR: [VRFC 10-91] enable_prog is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:113]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:37]
+INFO: [VRFC 10-240] VHDL file /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Bench_test_FPBN' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+xvhdl -m64 --relax -prj Bench_test_FPBN_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_test_FPBN
+ERROR: [VRFC 10-1412] syntax error near entity [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:39]
+ERROR: [VRFC 10-91] fpbn_top is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:76]
+ERROR: [VRFC 10-91] clk is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:108]
+ERROR: [VRFC 10-91] reset_n is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:110]
+ERROR: [VRFC 10-91] enable_prog is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:113]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:37]
+INFO: [VRFC 10-240] VHDL file /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-99] Step results log file:'/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Bench_test_FPBN' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+xvhdl -m64 --relax -prj Bench_test_FPBN_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_test_FPBN
+ERROR: [VRFC 10-1412] syntax error near entity [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:39]
+ERROR: [VRFC 10-91] fpbn_top is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:77]
+ERROR: [VRFC 10-91] clk is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:109]
+ERROR: [VRFC 10-91] reset_n is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:111]
+ERROR: [VRFC 10-91] enable_prog is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:114]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:37]
+INFO: [VRFC 10-240] VHDL file /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Bench_test_FPBN' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+xvhdl -m64 --relax -prj Bench_test_FPBN_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_test_FPBN
+ERROR: [VRFC 10-91] clk is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:78]
+ERROR: [VRFC 10-91] reset_n is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:79]
+ERROR: [VRFC 10-91] enable_prog is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:80]
+ERROR: [VRFC 10-91] noeud_out_1_0 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:81]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_0 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:81]
+ERROR: [VRFC 10-91] noeud_out_1_1 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:82]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_1 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:82]
+ERROR: [VRFC 10-91] noeud_out_1_2 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:83]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_2 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:83]
+ERROR: [VRFC 10-91] noeud_out_1_3 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:84]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_3 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:84]
+ERROR: [VRFC 10-91] noeud_out_1_4 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:85]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_4 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:85]
+ERROR: [VRFC 10-91] noeud_out_1_5 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:86]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_5 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:86]
+ERROR: [VRFC 10-91] noeud_out_1_6 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:87]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_6 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:87]
+ERROR: [VRFC 10-91] noeud_out_1_7 is not declared [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:88]
+ERROR: [VRFC 10-283] actual of formal out port noeud_out_1_7 cannot be an expression [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:88]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Bench_test_FPBN' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+xvhdl -m64 --relax -prj Bench_test_FPBN_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Bench_test_FPBN
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /softslin/vivado_17.1/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab -wto 00340cae70bd4c03980240d7b7359211 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Bench_test_FPBN_behav xil_defaultlib.Bench_test_FPBN -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-122] fpbn_top remains a black-box since it has no binding entity [/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sim_1/new/Bench_test_FPBN.vhd:111]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.bench_test_fpbn
+Built simulation snapshot Bench_test_FPBN_behav
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xsim.dir/Bench_test_FPBN_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav/xsim.dir/Bench_test_FPBN_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Jan 18 10:29:32 2018. For additional details about this file, please refer to the WebTalk help file at /softslin/vivado_17.1/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 18 10:29:32 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 6998.973 ; gain = 0.000 ; free physical = 858 ; free virtual = 12236
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Bench_test_FPBN_behav -key {Behavioral:sim_1:Functional:Bench_test_FPBN} -tclbatch {Bench_test_FPBN.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source Bench_test_FPBN.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Bench_test_FPBN_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 7040.539 ; gain = 41.566 ; free physical = 824 ; free virtual = 12208
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 211 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/.Xil/Vivado-4395-cimeld15/dcp11/FPBN_top.xdc]
+Finished Parsing XDC File [/tp/xph3app/xph3app604/Projet_3A/Vivado/.Xil/Vivado-4395-cimeld15/dcp11/FPBN_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.32 . Memory (MB): peak = 7113.539 ; gain = 4.000 ; free physical = 728 ; free virtual = 12120
+Restored from archive | CPU: 0.330000 secs | Memory: 4.664200 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.32 . Memory (MB): peak = 7113.539 ; gain = 4.000 ; free physical = 728 ; free virtual = 12120
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7260.055 ; gain = 217.516 ; free physical = 689 ; free virtual = 12074
+set_property is_enabled false [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/FPBN_top.vhd]
+update_compile_order -fileset sources_1
+set_property is_enabled true [get_files  /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN/project_BN.srcs/sources_1/new/FPBN_top.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_project_as project_noeud_seul /tp/xph3app/xph3app604/Projet_3A/Vivado/project_noeud_seul -force
+save_project_as: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 7294.043 ; gain = 4.004 ; free physical = 534 ; free virtual = 11998
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 18 11:16:27 2018...
