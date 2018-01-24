@@ -1,5 +1,5 @@
 # Projet_3A
-Dans ce dossier vous trouvez toutes les sources utiles
+Dans ce dossier vous trouvez toutes les sources utiles du projet Réseaux Bayesien
 
 ./Cadence 	--> library de caractérisation du TRNG et tests
 ./db_BN		--> Data base de réseau bayesien
