@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1516643414">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1516783434">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="FPBN_top.drc"/>
   <File Type="BG-BGN" Name="FPBN_top.bgn"/>
@@ -251,7 +251,7 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
     <Step Id="init_design"/>
-    <Step Id="opt_design"/>
+    <Step Id="opt_design" EnableStepBool="0"/>
     <Step Id="power_opt_design"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>

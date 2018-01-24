@@ -3,6 +3,8 @@
 # 
 
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -50,7 +52,7 @@ read_xdc /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN_New/project_BN_New.s
 set_property used_in_implementation false [get_files /tp/xph3app/xph3app604/Projet_3A/Vivado/project_BN_New/project_BN_New.srcs/constrs_1/new/contrainte_combinatorial_loop.xdc]
 
 
-synth_design -top FPBN_top -part xc7z020clg484-1
+synth_design -top FPBN_top -part xc7z020clg484-1 -fsm_extraction one_hot -resource_sharing off -control_set_opt_threshold 0
 
 
 write_checkpoint -force -noxdef FPBN_top.dcp

@@ -61,6 +61,8 @@ entity FPBN_top is
             led1: out std_logic;
             led2: out std_logic;
             start : in std_logic;
+            prob_out1bit : out std_logic;
+            clk_out: out std_logic;
             --noeud_out_2 : out std_logic_vector (9 downto 0)); -- sortie du deuxieme noeud
             noeud_out_2_0 : out std_logic; -- sortie de 1 du premier noeud
             noeud_out_2_1 : out std_logic; -- sortie de 1 du premier noeud
@@ -109,6 +111,12 @@ attribute IOSTANDARD of enable_prog : signal is "LVCMOS33";
 attribute LOC of start  : signal is "T18";   -- demare le calcul de prob
 attribute IOSTANDARD of start : signal is "LVCMOS33";
 
+attribute LOC of prob_out1bit  : signal is "V12";   
+attribute IOSTANDARD of prob_out1bit : signal is "LVCMOS33";
+
+attribute LOC of clk_out  : signal is "W10";   
+attribute IOSTANDARD of clk_out : signal is "LVCMOS33";
+
 --"Y11,AA11,Y19,AA9,AB11,AB10,AB9,AA8,AB6,AB7"
 
 attribute LOC of noeud_out_1_0  : signal is "Y11";   
@@ -140,11 +148,11 @@ attribute LOC of noeud_out_2_1  : signal is "AB7";
 attribute IOSTANDARD of noeud_out_2_1 : signal is "LVCMOS33";
 attribute LOC of noeud_out_2_2  : signal is "V4";   
 attribute IOSTANDARD of noeud_out_2_2 : signal is "LVCMOS33";
-attribute LOC of noeud_out_2_3  : signal is "W8";   
+attribute LOC of noeud_out_2_3  : signal is "T4";   
 attribute IOSTANDARD of noeud_out_2_3 : signal is "LVCMOS33";
-attribute LOC of noeud_out_2_4  : signal is "V12";   
+attribute LOC of noeud_out_2_4  : signal is "U5";   
 attribute IOSTANDARD of noeud_out_2_4 : signal is "LVCMOS33";
-attribute LOC of noeud_out_2_5  : signal is "W10";   
+attribute LOC of noeud_out_2_5  : signal is "U6";   
 attribute IOSTANDARD of noeud_out_2_5 : signal is "LVCMOS33";
 attribute LOC of noeud_out_2_6  : signal is "V9";   
 attribute IOSTANDARD of noeud_out_2_6 : signal is "LVCMOS33";
@@ -252,6 +260,9 @@ noeud_out_2_9<=noeud_out_2(9);
 
 
 led_out <= reset_n;
+
+prob_out1bit <= prob_out_1;
+clk_out <= clk;
 
 	netW: network generic map (4) port map (clk,reset_n,sig_prog_link,sig_prog,sig_prob,sig_Wen,sig_full,prob_out_1,prob_out_2);
     vip_moy1: VIP_moy port map (clk,reset_n,prob_out_1,start,led1,noeud_out_1,sig_trigger_count);

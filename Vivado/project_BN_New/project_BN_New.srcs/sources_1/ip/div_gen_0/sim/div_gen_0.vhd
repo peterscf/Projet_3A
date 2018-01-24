@@ -62,10 +62,10 @@ ENTITY div_gen_0 IS
     aresetn : IN STD_LOGIC;
     s_axis_divisor_tvalid : IN STD_LOGIC;
     s_axis_divisor_tready : OUT STD_LOGIC;
-    s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
     s_axis_dividend_tvalid : IN STD_LOGIC;
     s_axis_dividend_tready : OUT STD_LOGIC;
-    s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
     m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(47 DOWNTO 0)
   );
@@ -109,12 +109,12 @@ ARCHITECTURE div_gen_0_arch OF div_gen_0 IS
       s_axis_divisor_tready : OUT STD_LOGIC;
       s_axis_divisor_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axis_divisor_tlast : IN STD_LOGIC;
-      s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
       s_axis_dividend_tvalid : IN STD_LOGIC;
       s_axis_dividend_tready : OUT STD_LOGIC;
       s_axis_dividend_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axis_dividend_tlast : IN STD_LOGIC;
-      s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
       m_axis_dout_tvalid : OUT STD_LOGIC;
       m_axis_dout_tready : IN STD_LOGIC;
       m_axis_dout_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -139,24 +139,24 @@ BEGIN
       C_XDEVICEFAMILY => "zynq",
       C_HAS_ARESETN => 1,
       C_HAS_ACLKEN => 0,
-      C_LATENCY => 31,
+      C_LATENCY => 33,
       ALGORITHM_TYPE => 3,
-      DIVISOR_WIDTH => 32,
-      DIVIDEND_WIDTH => 32,
+      DIVISOR_WIDTH => 48,
+      DIVIDEND_WIDTH => 48,
       SIGNED_B => 1,
       DIVCLK_SEL => 1,
       FRACTIONAL_B => 1,
-      FRACTIONAL_WIDTH => 10,
+      FRACTIONAL_WIDTH => 0,
       C_HAS_DIV_BY_ZERO => 0,
       C_THROTTLE_SCHEME => 3,
       C_TLAST_RESOLUTION => 0,
       C_HAS_S_AXIS_DIVISOR_TUSER => 0,
       C_HAS_S_AXIS_DIVISOR_TLAST => 0,
-      C_S_AXIS_DIVISOR_TDATA_WIDTH => 32,
+      C_S_AXIS_DIVISOR_TDATA_WIDTH => 48,
       C_S_AXIS_DIVISOR_TUSER_WIDTH => 1,
       C_HAS_S_AXIS_DIVIDEND_TUSER => 0,
       C_HAS_S_AXIS_DIVIDEND_TLAST => 0,
-      C_S_AXIS_DIVIDEND_TDATA_WIDTH => 32,
+      C_S_AXIS_DIVIDEND_TDATA_WIDTH => 48,
       C_S_AXIS_DIVIDEND_TUSER_WIDTH => 1,
       C_M_AXIS_DOUT_TDATA_WIDTH => 48,
       C_M_AXIS_DOUT_TUSER_WIDTH => 1
