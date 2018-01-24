@@ -1,3 +1,11 @@
+------------------------------VIP_Rdm_Gen.vhd-----------------------------------------
+--Author: Floriant PETERSCHMITT
+--Version: 24/01/2018
+--description: VIP qui permet de lire 1 fichier en parametre generic de sortir 
+--	       des std_logic vector sur 12bits en lisant les valeurs en hexadecimal
+--	       simule le random générator avec un fichier en entrée.
+------------------------------VIP_Rdm_Gen.vhd-----------------------------------------
+
 --https://www.hdlworks.com/hdl_corner/vhdl_ref/VHDLContents/TEXTIOPackage.htm
 library IEEE ;
 use IEEE.std_logic_1164.ALL ;

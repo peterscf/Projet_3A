@@ -11,14 +11,14 @@ use IEEE.numeric_std.all;
 entity Memory is
     port(   clk: in std_logic;
             reset_n : in std_logic;
-      --Port entree
-      			addr : in std_logic_vector(4 downto 0);
-      			data_in : in std_logic_vector(9 downto 0);
-      			Wen : in std_logic;
-      			full_in : in std_logic;
-      --Port de sortie
-      			data_out : out std_logic_vector(9 downto 0);
-      			full_out : out std_logic		   					
+			--Port entree
+			addr : in std_logic_vector(4 downto 0);
+			data_in : in std_logic_vector(9 downto 0);
+			Wen : in std_logic;
+			full_in : in std_logic;
+			--Port de sortie
+			data_out : out std_logic_vector(9 downto 0);
+			full_out : out std_logic		   					
 				);
 end Memory;
 

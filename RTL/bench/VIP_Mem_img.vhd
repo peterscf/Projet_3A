@@ -1,3 +1,10 @@
+------------------------------VIP_Mem_img.vhd-----------------------------------------
+--Author: Floriant PETERSCHMITT
+--Version: 24/01/2018
+--description: VIP qui permet de lire 2 fichier en parametre generic de sortir 
+--	       des std_logic vector sur 12bits en lisant les valeurs en hexadecimal
+------------------------------VIP_MEM_img.vhd-----------------------------------------
+
 --https://www.hdlworks.com/hdl_corner/vhdl_ref/VHDLContents/TEXTIOPackage.htm
 library IEEE ;
 use IEEE.std_logic_1164.ALL ;

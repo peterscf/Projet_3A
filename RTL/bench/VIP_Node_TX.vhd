@@ -1,3 +1,10 @@
+------------------------------VIP_Node_TX.vhd-----------------------------------------
+--Author: Floriant PETERSCHMITT
+--Version: 24/01/2018
+--description: VIP qui permet de simuler le noeud parent du noeud sous test
+--	une variante existe comenté avec utilisation de random
+------------------------------VIP_Node_TX.vhd-----------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 --use IEEE.std_logic_arith.all;
@@ -15,6 +22,23 @@ end VIP_Node_TX;
 architecture A of VIP_Node_TX is
 
 begin
+
+	process(clk)
+	begin
+		if (clk'event and clk = '1') then
+			if reset_n = '0' then
+			addr_out <= std_logic_vector (to_unsigned(4,addr_out'length));
+			else
+				if enable_prog = '0' then
+					addr_out <= "00000000000";
+	
+				else
+					addr_out <= "00000000000";
+			end if;
+		end if;
+	end if;
+
+	end process;
 
 --send: process(clk,reset_n,enable_prog) 
 --    variable seed1, seed2: positive;               -- seed values for random generator
@@ -40,22 +64,6 @@ begin
 --		end if;
 --	end if;
 --	end process send ;
-	process(clk)
-	begin
-		if (clk'event and clk = '1') then
-			if reset_n = '0' then
-			addr_out <= std_logic_vector (to_unsigned(4,addr_out'length));
-			else
-				if enable_prog = '0' then
-					addr_out <= "00000000000";
-	
-				else
-					addr_out <= "00000000000";
-			end if;
-		end if;
-	end if;
-
-	end process;
 
 end A;
 

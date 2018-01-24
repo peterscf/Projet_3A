@@ -1,3 +1,10 @@
+-----------------------------VIP_moy.vhd-----------------------------------------
+--Author: Floriant PETERSCHMITT
+--Version: 24/01/2018
+--Description: VIP qui emule un noeud en sortie du noeud sous test pour la partie
+--programmation envoi full des que 32 valeur sont arriver
+------------------------------VIP_moy.vhd-----------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 --use IEEE.std_logic_arith.all;
@@ -29,7 +36,7 @@ begin
 			if prog_link_in'event then --or (clk'event and clk='1') then 
 				i:= i+1;
 			end if;
-			if i>4 then 
+			if i>4 then --compte 5 et envoi full
 				full_out <= '1';
 			--	i:=0;
 			end if;
@@ -37,7 +44,7 @@ begin
 			if data_in'event or (clk'event and clk='1')then 
 				i:= i+1;
 			end if;
-			if i>31 then 
+			if i>31 then --compte 32 taille mémoire et envoi full
 				full_out <= '1' ;
 				--i:=-1;
 			end if;

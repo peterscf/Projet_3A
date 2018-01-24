@@ -32,11 +32,6 @@ architecture A of GATEWAY is
 	signal index : unsigned (2 downto 0) ;
 	signal index_temp : unsigned (2 downto 0) ;
 
---	signal prog_link_reg_1 : std_logic_vector(N_parents downto 0);
---	signal prog_link_reg_2 : std_logic_vector(N_parents downto 0);
---	signal prog_link_reg_3 : std_logic_vector(N_parents downto 0);
---	signal prog_link_reg_4 : std_logic_vector(N_parents downto 0);
---	signal prog_link_reg_5 : std_logic_vector(N_parents downto 0);
 type REG is array (0 to 4) of std_logic_vector(N_parents downto 0);
 signal prog_link_reg : REG ;
 begin

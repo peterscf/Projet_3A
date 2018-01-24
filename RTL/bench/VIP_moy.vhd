@@ -1,6 +1,8 @@
 -----------------------------VIP_moy.vhd-----------------------------------------
 --Author: Floriant PETERSCHMITT
---Version: 18/12/2017
+--Version: 24/01/2018
+--Description: calcule la probabilité de sortie en divisant le nb de 1 par 
+--le nombre de clock compté (proba en real 0.xxxxxx)
 ------------------------------VIP_moy.vhd-----------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;

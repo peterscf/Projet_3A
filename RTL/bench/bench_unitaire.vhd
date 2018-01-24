@@ -1,3 +1,8 @@
+------------------------------bench_unitaire.vhd-----------------------------------------
+--Author: Floriant PETERSCHMITT
+--Version: 24/01/2018
+------------------------------bench_unitaire.vhd-----------------------------------------
+
 library IEEE ;
 use IEEE.std_logic_1164.ALL ;
 --use ieee.std_logic_signed.all;
@@ -18,8 +23,8 @@ architecture test1 of test_unitaire is
 	--VIP qui permet de programmer le DUT (CORE ici)
 	component VIP_prog is
 	 generic(N_parents : integer := 10; 
-			mem_file : string (21 downto 1); 
-				gw_file : string (20 downto 1) );
+			mem_file : string (21 downto 1); --/!\nombre de caratère doit etre exactement egale a 21 !!!
+				gw_file : string (20 downto 1) ); --/!\nombre de caratère doit etre exactement egale a 20 !!!
 
 
     port(		clk: in std_logic;
@@ -47,7 +52,7 @@ architecture test1 of test_unitaire is
 
 	--VIP Random Generator permet de simuler le random générator qui sera intéger sur FPGA
 	component VIP_Rdm_Gen is
-		generic(rdm_file : string (21 downto 1) ); 
+		generic(rdm_file : string (21 downto 1) ); --/!\nombre de caratère doit etre exactement egale a 21 !!!
 		port(	clk: in std_logic;
 				reset_n : in std_logic;
 				rdm_gen : out std_logic_vector(9 downto 0));
