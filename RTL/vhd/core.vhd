@@ -84,7 +84,7 @@ begin
 
 	compare :process(sig_prob,rdm_gene_in)
 	begin
-		if rdm_gene_in < sig_prob then 
+		if unsigned(rdm_gene_in) < unsigned(sig_prob) then 
 			prob_out <=	'1';
 		else 
 			prob_out <= '0';

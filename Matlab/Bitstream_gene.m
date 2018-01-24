@@ -247,7 +247,7 @@ indice_liste=1;
 for i=1:layer_size(1) %les parents bitstream memoire coef
 
     Noeud_courrant = liste_noeuds(indice_liste);
-    a = fi((Noeud_courrant.probabilite(2)*1000),0,10,0);
+    a = fi((Noeud_courrant.probabilite(1)*1000),0,10,0);
     Tampon_binaire=a.bin;% Ceci est un string de 1 et 0
 
     Tampon_conv_string2numb(:)=str2num(Tampon_binaire(:));
@@ -341,7 +341,7 @@ memoire_hex = num2str(memoire_hex);
 
 memoire_hex=bin2dec(memoire_hex);
 
-memoire_hex=dec2hex(memoire_hex);
+memoire_hex=dec2hex(memoire_hex,3);
 
 memoire_hex_inv =memoire_hex;
 
@@ -363,7 +363,12 @@ end
 gateway_hex = num2str(gateway_hex);
 gateway_hex=bin2dec(gateway_hex);
 
+<<<<<<< HEAD
+gateway_hex=dec2hex(gateway_hex,3);
+
+=======
 gateway_hex=dec2hex(gateway_hex);
+>>>>>>> c2273cd8cb2799410882b56cec74e96243b4ae2c
 gateway_hex_inv =gateway_hex;
 
 for m=1:1:5*nb_noeud

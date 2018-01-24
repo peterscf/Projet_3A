@@ -5,6 +5,7 @@
 if [ -z $PROJECT_DIR ]
 then
 	echo "Veulliez sourcez le source.sh a la racine du dossier RTL"
+	echo"source ./source $PWD"
 else
 
 	echo "CLEAN"

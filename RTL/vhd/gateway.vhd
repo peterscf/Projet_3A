@@ -41,8 +41,9 @@ type REG is array (0 to 4) of std_logic_vector(N_parents downto 0);
 signal prog_link_reg : REG ;
 begin
 
-P_STATE: process(clk,reset_n) begin111
-. 
+P_STATE: process(clk,reset_n) 
+begin
+
     
     if (clk'event and clk = '1') then
 		if reset_n = '0' then

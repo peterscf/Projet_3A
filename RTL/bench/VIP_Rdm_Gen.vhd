@@ -9,7 +9,7 @@ use ieee.std_logic_textio.all;
 use std.textio.all;
 
 entity VIP_Rdm_Gen is
-	--generic(N_parents : integer := 10); 
+generic(rdm_file : string (21 downto 1) ); 
 
     port(		clk: in std_logic;
 				reset_n : in std_logic;
@@ -62,7 +62,7 @@ begin
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
  LECTURE_X: process
 	variable L: line;
-	file ENTREES : text open read_mode is "./bench/rdm.txt";
+	file ENTREES : text open read_mode is rdm_file;
 	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (3 downto 1);
 	variable i: integer :=0;

@@ -9,8 +9,8 @@ use ieee.std_logic_textio.all;
 use std.textio.all;
 
 entity VIP_Mem_img is
-	generic(N_parents : integer := 10); 
-
+generic (  mem_file : string (21 downto 1); 
+		   gw_file : string (20 downto 1) ); 
     port(		clk: in std_logic;
 				reset_n : in std_logic;
 				send_MEM: in std_logic;
@@ -64,7 +64,7 @@ begin
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
  LECTURE_MEM: process
 	variable L: line;
-	file ENTREES : text open read_mode is "./bench/Alarm/MEM.img";
+	file ENTREES : text open read_mode is Mem_file;
 	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (3 downto 1);
 	variable i: integer :=0;
@@ -87,7 +87,7 @@ begin
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
  LECTURE_GW: process
 	variable L: line;
-	file ENTREES : text open read_mode is "./bench/Alarm/GW.img";
+	file ENTREES : text open read_mode is gw_file;
 	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (3 downto 1);
 	variable i: integer :=0;

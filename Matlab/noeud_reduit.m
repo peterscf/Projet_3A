@@ -47,7 +47,7 @@ classdef noeud_reduit
                 nd.nom = nom;
                 nd.parents = parents;
                 nd.probabilite = probabilite;
-                nd.theta = theta;
+                %nd.theta = theta;
                 global layer_size;
                 global liste_noeuds;
                 global indice;
@@ -64,6 +64,8 @@ classdef noeud_reduit
                     
                     liste_noeuds(indice)=nd;
                     
+                    nd.theta = theta;
+                    
                 else
                     nd.layer_level = max(nd.parents.layer_level)+1;
                         [layer_size,nd.rang] = verif_layer_size(nd,layer_size,layer);
@@ -71,21 +73,26 @@ classdef noeud_reduit
                         liste_noeuds(indice)=nd;                    
                     
                     if length(nd.parents) == 1
+                        nd.theta = theta;
 
 
                     elseif length(nd.parents) == 2
-
-
+%                         temp=theta; %Quickfix inversion des coefficient pour 2 parent
+%                         temp(2)=theta(3);
+%                         temp(3)=theta(2);
+%                         nd.theta = temp;
+                          nd.theta = theta;
                         
                     elseif length(nd.parents) == 3
-
+                        nd.theta = theta; %quickfix d'inversion de coefficient a faire
 
                         
                     elseif length(nd.parents) == 4
+                        nd.theta = theta;%quickfix d'inversion de coefficient a faire
 
 
-                    elseif length(nd.parents) == 5
-
+                    elseif length(nd.parents) == 5              
+                        nd.theta = theta;%quickfix d'inversion de coefficient a faire
 
                     end
                     

@@ -17,7 +17,10 @@ architecture test1 of test_unitaire is
 --VIP TX--
 	--VIP qui permet de programmer le DUT (CORE ici)
 	component VIP_prog is
-		generic(N_parents : integer := 10); 
+	 generic(N_parents : integer := 10; 
+			mem_file : string (21 downto 1); 
+				gw_file : string (20 downto 1) );
+
 
     port(		clk: in std_logic;
 				reset_n : in std_logic;
@@ -26,7 +29,8 @@ architecture test1 of test_unitaire is
       			Wen : out std_logic;
       			full_in : in std_logic;
       			prog_link_out : out std_logic_vector(N_parents downto 0);
-      			prob_out : out std_logic_vector (9 downto 0)
+      			prob_out : out std_logic_vector (9 downto 0);
+				end_prog :out std_logic
 		);
 	end component;
 
@@ -43,6 +47,7 @@ architecture test1 of test_unitaire is
 
 	--VIP Random Generator permet de simuler le random générator qui sera intéger sur FPGA
 	component VIP_Rdm_Gen is
+		generic(rdm_file : string (21 downto 1) ); 
 		port(	clk: in std_logic;
 				reset_n : in std_logic;
 				rdm_gen : out std_logic_vector(9 downto 0));
@@ -66,6 +71,7 @@ architecture test1 of test_unitaire is
 	component VIP_moy is
     port(	clk: in std_logic;
 			reset_n : in std_logic;
+			end_prog : in std_logic;
 			prob_in : in std_logic;
 			prob_out : out real		
 		);
@@ -111,6 +117,8 @@ signal sig_prog_link_out : std_logic_vector (NP downto 0);
 signal sig_data_out : std_logic_vector (9 downto 0);
 signal sig_prob_out : std_logic;
 
+signal sig_end_prog : std_logic;
+
 signal sig_enable_prog : std_logic :='1';
 signal sig_result : real;
 signal sig_clk : std_logic :='0';
@@ -126,7 +134,10 @@ begin
 --	sig_enable_prog <='0' after 180 ns;
 
 VIP_PR : VIP_prog 	
-	generic map (N_parents => NP) 
+	
+ 	generic map (NP,
+				"./bench/Unit_/MEM.img",
+				"./bench/Unit_/GW.img") 
     port map(	sig_clk,
 				sig_reset_n,
 				sig_enable_prog,
@@ -134,7 +145,8 @@ VIP_PR : VIP_prog
       			sig_Wen,
       			sig_full_out,
       			sig_prog_link_in,
-      			sig_data_in);
+      			sig_data_in,
+				sig_end_prog);
 
 VIP_N_RX : VIP_Node_RX
 	generic map (N_parents => NP)
@@ -154,6 +166,7 @@ VIP_N_TX : VIP_Node_TX
 				sig_addr);
 
 VIP_R_G: VIP_Rdm_Gen
+generic map( "./bench/rdm/rdm_1.txt")
 	port map(	sig_clk,
 				sig_reset_n,
 				sig_rdm_gen);
@@ -161,6 +174,7 @@ VIP_R_G: VIP_Rdm_Gen
 VIP_M : VIP_moy
 	port map(	sig_clk,
 				sig_reset_n,
+				sig_end_prog,
 				sig_prob_out,
 				sig_result);
 Node : CORE 
